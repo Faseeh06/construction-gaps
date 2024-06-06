@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    overflow-x: hidden;
+}
+
+:root {
+    --accent: #ff4a17
+}
+
+.movingtext {
+    font-family: helvetica;
+    color: red;
+    -webkit-text-stroke: 2px var(--accent);
+}
