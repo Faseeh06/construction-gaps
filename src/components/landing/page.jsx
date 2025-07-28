@@ -3,107 +3,84 @@ import Image from 'next/image'
 import styles from './style.module.scss'
 import { slideUp } from './animation';
 import { motion } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
 
 export default function Home() {
-    const videoRef = useRef(null);
-    const [videoLoaded, setVideoLoaded] = useState(false);
-
-    useEffect(() => {
-        const video = videoRef.current;
-        
-        if (video) {
-            // Force high quality settings
-            video.setAttribute('playsinline', 'true');
-            video.setAttribute('webkit-playsinline', 'true');
-            video.setAttribute('muted', 'true');
-            video.setAttribute('loop', 'true');
-            video.setAttribute('autoplay', 'true');
-            video.setAttribute('preload', 'metadata');
-            
-            // Set video quality properties
-            video.style.objectFit = 'cover';
-            video.style.width = '100%';
-            video.style.height = '100%';
-            
-            const handleVideoLoad = () => {
-                setVideoLoaded(true);
-                // Force play with high quality
-                video.currentTime = 0;
-                video.playbackRate = 1.0;
-                video.volume = 0;
-                
-                const playPromise = video.play();
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        console.log('Auto-play prevented:', error);
-                        // Retry play on user interaction
-                        document.addEventListener('click', () => {
-                            video.play();
-                        }, { once: true });
-                    });
-                }
-            };
-
-            const handleVideoEnd = () => {
-                video.currentTime = 0;
-                video.play();
-            };
-
-            const handleVideoError = () => {
-                console.log('Video error, retrying...');
-                setTimeout(() => {
-                    video.load();
-                    video.play();
-                }, 1000);
-            };
-
-            // Event listeners
-            video.addEventListener('loadedmetadata', handleVideoLoad);
-            video.addEventListener('ended', handleVideoEnd);
-            video.addEventListener('error', handleVideoError);
-            video.addEventListener('stalled', () => video.play());
-            video.addEventListener('waiting', () => video.play());
-
-            // Force reload and play
-            video.load();
-            
-            // Continuous monitoring
-            const monitorInterval = setInterval(() => {
-                if (video.paused || video.ended) {
-                    video.currentTime = 0;
-                    video.play();
-                }
-            }, 1000);
-
-            return () => {
-                video.removeEventListener('loadedmetadata', handleVideoLoad);
-                video.removeEventListener('ended', handleVideoEnd);
-                video.removeEventListener('error', handleVideoError);
-                video.removeEventListener('stalled', () => video.play());
-                video.removeEventListener('waiting', () => video.play());
-                clearInterval(monitorInterval);
-            };
-        }
-    }, []);
 
     return (
         <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
-            <video
-                ref={videoRef}
-                className={styles.backgroundVideo}
-                poster="/images/random/1.jpg"
-            >
-                <source src="/videos/landing.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
-                <source src="/videos/landing.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <div data-scroll data-scroll-speed={0.1} className={styles.description}>
-                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 8.5C8.27614 8.5 8.5 8.27614 8.5 8L8.5 3.5C8.5 3.22386 8.27614 3 8 3C7.72386 3 7.5 3.22386 7.5 3.5V7.5H3.5C3.22386 7.5 3 7.72386 3 8C3 8.27614 3.22386 8.5 3.5 8.5L8 8.5ZM0.646447 1.35355L7.64645 8.35355L8.35355 7.64645L1.35355 0.646447L0.646447 1.35355Z" fill="white" />
-                </svg>
-                <p>Professionelle Kernsanierung</p>
-                <p>Von der ersten Idee bis zur fertigen Umsetzung</p>
+            <Image
+                src="/images/hero1.jpg"
+                alt="Hero Background"
+                fill={true}
+                className={styles.backgroundImage}
+                priority
+            />
+            
+            
+            
+            <div className={styles.lowerSection}>
+                <div className={styles.leftSection}>
+                    <div className={styles.placeholderTop}>
+                        <h3>BEREIT FÜR IHR TRAUMHAUS?</h3>
+                        <p>Lassen Sie uns gemeinsam Ihr Projekt verwirklichen. Wir bieten Ihnen eine kostenlose Erstberatung und ein unverbindliches Konzept.</p>
+                        <div className={styles.socialLinks}>
+                            <div className={styles.socialLink}>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </div>
+                            <div className={styles.socialLink}>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </div>
+                            <div className={styles.socialLink}>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.glassWidget}>
+                    <button style={{ 
+  background: 'transparent', 
+  border: 'none', 
+  padding: 0, 
+  cursor: 'pointer', 
+  color: 'white', 
+  display: 'flex', 
+  alignItems: 'center', 
+  gap: '8px' 
+}}>
+                            <span>Kontaktiere uns noch heute</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 1L15 8L8 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div className={styles.rightSection}>
+                    <div className={styles.placeholderRight1}>
+                        <h3>UNSERE LEISTUNGEN</h3>
+                        <p>Von der ersten Idee bis zur fertigen Umsetzung - wir begleiten Sie durch jeden Schritt Ihrer Kernsanierung mit höchster Qualität und Zuverlässigkeit.</p>
+                    </div>
+                    <div className={styles.placeholderRight2}>
+                        <div className={styles.discoverSection}>
+                            <div className={styles.teamAvatars}>
+                                <div className={styles.avatar}></div>
+                                <div className={styles.avatar}></div>
+                                <div className={styles.avatar}></div>
+                            </div>
+                            <button style={{ background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', color: '#1a1a1a', display: 'flex', alignItems: 'center', gap: '12px', fontSize: '16px', fontWeight: '500' }}>
+                                <span>Beratungstermin</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 1L15 8L8 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </motion.main>
     )
