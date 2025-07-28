@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "installCommand": "npm ci --prefer-offline --no-audit",
+  "installCommand": "npm install",
   "framework": "nextjs",
   "functions": {
     "app/**/*.tsx": {
