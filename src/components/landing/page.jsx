@@ -6,6 +6,16 @@ import { motion } from 'framer-motion';
 
 export default function Home() {
 
+    const scrollToNextSection = () => {
+        const nextSection = document.querySelector('[data-section="description"]');
+        if (nextSection) {
+            nextSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
             <Image
@@ -16,7 +26,19 @@ export default function Home() {
                 priority
             />
             
-            
+            <div className={styles.centerJourneyButton} onClick={scrollToNextSection}>
+                <p>Starte die Reise</p>
+                <div className={styles.mouseIcon}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9v6c0 3.87 3.13 7 7 7s7-3.13 7-7V9c0-3.87-3.13-7-7-7z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M12 6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M8 12h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 1L8 15M8 15L15 8M8 15L1 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </div>
+            </div>
             
             <div className={styles.lowerSection}>
                 <div className={styles.leftSection}>
@@ -47,7 +69,7 @@ export default function Home() {
   border: 'none', 
   padding: 0, 
   cursor: 'pointer', 
-  color: 'white', 
+  color: 'black', 
   display: 'flex', 
   alignItems: 'center', 
   gap: '8px' 
@@ -68,9 +90,27 @@ export default function Home() {
                     <div className={styles.placeholderRight2}>
                         <div className={styles.discoverSection}>
                             <div className={styles.teamAvatars}>
-                                <div className={styles.avatar}></div>
-                                <div className={styles.avatar}></div>
-                                <div className={styles.avatar}></div>
+                                <Image 
+                                    src="/images/pfp/pfp1.jpg" 
+                                    alt="Team Member 1" 
+                                    width={65} 
+                                    height={65} 
+                                    className={styles.avatar}
+                                />
+                                <Image 
+                                    src="/images/pfp/pfp2.jpg" 
+                                    alt="Team Member 2" 
+                                    width={65} 
+                                    height={65} 
+                                    className={styles.avatar}
+                                />
+                                <Image 
+                                    src="/images/pfp/pfp3.jpg" 
+                                    alt="Team Member 3" 
+                                    width={65} 
+                                    height={65} 
+                                    className={styles.avatar}
+                                />
                             </div>
                             <button style={{ background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', color: '#1a1a1a', display: 'flex', alignItems: 'center', gap: '12px', fontSize: '16px', fontWeight: '500' }}>
                                 <span>Beratungstermin</span>

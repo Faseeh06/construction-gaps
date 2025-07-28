@@ -22,7 +22,7 @@ export default function index() {
                 <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Ihr Experte für professionelle Generalsanierung und modernen Umbau. Wir schaffen Werte, die bleiben.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
-                        <p>Mehr erfahren</p>
+                        <p>Mehr </p>
                     </Rounded>
                 </div>
             </div>

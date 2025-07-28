@@ -13,7 +13,7 @@
 - Neue Elektrik & Heizung
 - Moderne Böden & Küche
 
-**CTA:** Mehr erfahren →
+**CTA:** Erkunden  →
 
 ### 2. INNENAUSBAU
 **Icon:** ✅ (Checkmark icon)
@@ -24,7 +24,7 @@
 - Bodenbeläge & Fliesen
 - Küchen & Bäder
 
-**CTA:** Mehr erfahren →
+**CTA:** Erkunden  →
 
 ### 3. ROHBAU
 **Icon:** 📋 (Document/Clipboard icon)
@@ -35,7 +35,7 @@
 - Wände & Decken
 - Dach & Fassade
 
-**CTA:** Mehr erfahren →
+**CTA:** Erkunden  →
 
 ### 4. ENERGIEEFFIZIENZ
 **Icon:** ⚡ (Lightning/Energy icon)
@@ -46,7 +46,7 @@
 - Moderne Heizung
 - Smart Home
 
-**CTA:** Mehr erfahren →
+**CTA:** Erkunden  →
 
 ---
 

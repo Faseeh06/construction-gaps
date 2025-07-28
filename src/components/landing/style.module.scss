@@ -263,12 +263,13 @@
                 align-items: center;
 
                 .avatar {
-                    width: 40px;
-                    height: 40px;
+                    width: 65px;
+                    height: 65px;
                     border-radius: 50%;
                     background: rgba(255, 255, 255, 0.3);
-                    border: 2px solid rgba(255, 255, 255, 0.2);
+                    border: none;
                     margin-left: -15px;
+                    object-fit: cover;
                     
                     &:first-child {
                         margin-left: 0;
@@ -297,6 +298,7 @@
                     background: rgba(255, 255, 255, 0.3);
                     border: 2px solid rgba(255, 255, 255, 0.2);
                     margin-left: -15px;
+                    object-fit: cover;
                     
                     &:first-child {
                         margin-left: 0;
@@ -427,6 +429,70 @@
         svg {
             transform: scale(2);
             margin-bottom: 100px;
+        }
+    }
+
+    .centerJourneyButton {
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+        z-index: 10;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+
+        p {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .mouseIcon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: white;
+
+            svg:first-child {
+                animation: bounce 2s infinite;
+            }
+
+            svg:last-child {
+                animation: pulse 2s infinite;
+            }
+        }
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-10px);
+        }
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
         }
     }
 }

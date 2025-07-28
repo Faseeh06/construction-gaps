@@ -35,7 +35,9 @@ export default function Home() {
         {isLoading && <Preloader />}
       </AnimatePresence>
       <Landing />
-      <Description />
+      <div data-section="description">
+        <Description />
+      </div>
       <Projects />
       <SlidingImages />
       <Contact />
