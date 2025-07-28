@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import Header from '../components/header/page'
-import Description from '../components/Description/page'
 import Landing from '../components/landing/page'
-import SlidingImages from '../components/Slidingimages/index'
-import Contact from '../components/Contact/page'
-import Projects from '../components/Projects/index'
+import Features from '../components/Features/page'
+import HouseLayout from '../components/HouseLayout/page'
+import RecentPhotos from '../components/RecentPhotos/page'
+import ContactForm from '../components/ContactForm/page'
+import Footer from '../components/Footer/page'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '../components/Preloader/page'
@@ -35,12 +36,11 @@ export default function Home() {
         {isLoading && <Preloader />}
       </AnimatePresence>
       <Landing />
-      <div data-section="description">
-        <Description />
-      </div>
-      <Projects />
-      <SlidingImages />
-      <Contact />
+      <Features />
+      <HouseLayout />
+      <RecentPhotos />
+      <ContactForm />
+      <Footer />
     </>
   );
 }

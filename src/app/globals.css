@@ -2,8 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Anthro';
+    src: url('/fonts/anthro/AnthroTrial-Light-BF642635db1f586.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anthro';
+    src: url('/fonts/anthro/AnthroTrial-Light-BF642635db10e43.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anthro';
+    src: url('/fonts/anthro/AnthroTrial-Medium-BF642635db11351.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Anthro';
+    src: url('/fonts/anthro/AnthroTrial-Medium-BF642635db1a64b.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BodyTextLargeBold';
+    src: url('/fonts/Body Text Large Bold/Body Text Large Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     overflow-x: hidden;
+    font-family: 'Anthro', sans-serif;
 }
 
 :root {
