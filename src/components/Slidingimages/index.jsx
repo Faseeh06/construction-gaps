@@ -6,39 +6,47 @@ import Image from 'next/image';
 
 const slider1 = [
     {
-        color: "#e3e5e7",
-        src: "c2.jpg"
+        color: "#2C3E50",
+        src: "/random/6.jpg",
+        title: "Kernsanierung"
     },
     {
-        color: "#d6d7dc",
-        src: "decimal.jpg"
+        color: "#34495E",
+        src: "/random/7.jpg",
+        title: "Innenausbau"
     },
     {
-        color: "#e3e3e3",
-        src: "funny.jpg"
+        color: "#5D6D7E",
+        src: "/random/8.jpg",
+        title: "Rohbau"
     },
     {
-        color: "#21242b",
-        src: "google.jpg"
+        color: "#85929E",
+        src: "/random/9.jpg",
+        title: "Energieeffizienz"
     }
 ]
 
 const slider2 = [
     {
-        color: "#d4e3ec",
-        src: "maven.jpg"
+        color: "#2C3E50",
+        src: "/random/10.jpg",
+        title: "500+ Projekte"
     },
     {
-        color: "#e5e0e1",
-        src: "panda.jpg"
+        color: "#34495E",
+        src: "/random/11.jpg",
+        title: "15+ Jahre"
     },
     {
-        color: "#d7d4cf",
-        src: "powell.jpg"
+        color: "#5D6D7E",
+        src: "/random/12.jpg",
+        title: "100% Zufriedenheit"
     },
     {
-        color: "#e1dad6",
-        src: "wix.jpg"
+        color: "#85929E",
+        src: "/random/13.jpg",
+        title: "Kostenlose Beratung"
     }
 ]
 
@@ -64,7 +72,10 @@ export default function index() {
                                 <Image
                                     fill={true}
                                     alt={"image"}
-                                    src={`/images/${project.src}`} />
+                                    src={project.src} />
+                            </div>
+                            <div className={styles.overlay}>
+                                <h3>{project.title}</h3>
                             </div>
                         </div>
                     })
@@ -78,7 +89,10 @@ export default function index() {
                                 <Image
                                     fill={true}
                                     alt={"image"}
-                                    src={`/images/${project.src}`} />
+                                    src={project.src} />
+                            </div>
+                            <div className={styles.overlay}>
+                                <h3>{project.title}</h3>
                             </div>
                         </div>
                     })

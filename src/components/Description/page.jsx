@@ -6,7 +6,7 @@ import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
 export default function index() {
 
-    const phrase = "Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.";
+    const phrase = "Von der ersten Idee bis zur fertigen Umsetzung - wir begleiten Sie durch jeden Schritt Ihrer Kernsanierung mit höchster Qualität und Zuverlässigkeit.";
     const description = useRef(null);
     const isInView = useInView(description)
     return (
@@ -19,10 +19,10 @@ export default function index() {
                         })
                     }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>The combination of my passion for design, code & interaction positions me in a unique place in the web design world.</motion.p>
+                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Ihr Experte für professionelle Generalsanierung und modernen Umbau. Wir schaffen Werte, die bleiben.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
-                        <p>Know me</p>
+                        <p>Mehr erfahren</p>
                     </Rounded>
                 </div>
             </div>

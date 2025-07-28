@@ -6,6 +6,62 @@
     height: 100vh;
     overflow: hidden;
 
+    .backgroundVideo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        // Force maximum quality
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+        
+        // Hardware acceleration
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+        
+        // Performance optimizations
+        will-change: transform;
+        -webkit-will-change: transform;
+        
+        // Prevent quality degradation
+        -webkit-filter: none;
+        filter: none;
+        
+        // Force high quality rendering
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        
+        // Video specific optimizations
+        &::-webkit-media-controls {
+            display: none !important;
+        }
+        
+        &::-webkit-media-controls-panel {
+            display: none !important;
+        }
+        
+        &::-webkit-media-controls-play-button {
+            display: none !important;
+        }
+        
+        &::-webkit-media-controls-start-playback-button {
+            display: none !important;
+        }
+    }
+
     img {
         object-fit: cover;
     }

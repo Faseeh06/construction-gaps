@@ -3,10 +3,10 @@ import styles from './style.module.scss';
 export default function index() {
   return (
     <div className={styles.footer}>
-        <a>Awwwards</a>
-        <a>Instagram</a>
-        <a>Dribble</a>
-        <a>LinkedIn</a>
+        <a>+49 30 55540</a>
+        <a>info@irfan-yildiz.de</a>
+        <a>Beratungstermin</a>
+        <a>Google Maps</a>
     </div>
   )
 }

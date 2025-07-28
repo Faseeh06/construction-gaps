@@ -7,26 +7,30 @@ import gsap from 'gsap';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton';
 
-const projects = [
+const services = [
   {
-    title: "Cloud Engineer",
-    src: "c2montreal.png",
-    color: "#000000"
+    title: "KERNSANIERUNG",
+    src: "/random/1.jpg",
+    color: "#2C3E50",
+    description: "Komplette Renovierung von Grund auf - von der Planung bis zur Fertigstellung."
   },
   {
-    title: "Network Engineer",
-    src: "officestudio.png",
-    color: "#8C8C8C"
+    title: "INNENAUSBAU",
+    src: "/random/2.jpg",
+    color: "#34495E",
+    description: "Professioneller Innenausbau mit hochwertigen Materialien und modernem Design."
   },
   {
-    title: "Data Administrator",
-    src: "locomotive.png",
-    color: "#EFE8D3"
+    title: "ROHBAU",
+    src: "/random/4.jpg",
+    color: "#5D6D7E",
+    description: "Solide Grundstruktur mit höchsten Baustandards und höchster Qualität."
   },
   {
-    title: "Web3 Engineer",
-    src: "silencio.png",
-    color: "#706D63"
+    title: "ENERGIEEFFIZIENZ",
+    src: "/random/5.jpg",
+    color: "#85929E",
+    description: "Nachhaltige Lösungen für optimale Energieeffizienz und hohen Komfort."
   }
 ]
 
@@ -82,34 +86,37 @@ export default function Home() {
     <main onMouseMove={(e) => { moveItems(e.clientX, e.clientY) }} className={styles.projects}>
       <div className={styles.body}>
         {
-          projects.map((project, index) => {
-            return <Project index={index} title={project.title} manageModal={manageModal} key={index} />
+          services.map((service, index) => {
+            return <Project index={index} title={service.title} manageModal={manageModal} key={index} />
           })
         }
       </div>
       <Rounded>
-        <p>More work</p>
+        <p>Alle Leistungen</p>
       </Rounded>
       <>
         <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
           <div style={{ top: index * -100 + "%" }} className={styles.modalSlider}>
             {
-              projects.map((project, index) => {
-                const { src, color } = project
+              services.map((service, index) => {
+                const { src, color, description } = service
                 return <div className={styles.modal} style={{ backgroundColor: color }} key={`modal_${index}`}>
-                  <Image
-                    src={`/images/${src}`}
-                    width={300}
-                    height={0}
-                    alt="image"
-                  />
+                  <div className={styles.modalContent}>
+                    <Image
+                      src={src}
+                      width={300}
+                      height={200}
+                      alt="service"
+                    />
+                    <p className={styles.modalDescription}>{description}</p>
+                  </div>
                 </div>
               })
             }
           </div>
         </motion.div>
         <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
-        <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>View</motion.div>
+        <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>Mehr erfahren</motion.div>
       </>
     </main>
   )

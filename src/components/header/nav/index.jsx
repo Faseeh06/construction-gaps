@@ -9,20 +9,20 @@ import Footer from './Footer';
 
 const navItems = [
   {
-    title: "Home",
+    title: "Startseite",
     href: "/",
   },
   {
-    title: "Work",
-    href: "/work",
+    title: "Leistungen",
+    href: "/leistungen",
   },
   {
-    title: "About",
-    href: "/about",
+    title: "Über uns",
+    href: "/ueber-uns",
   },
   {
-    title: "Contact",
-    href: "/contact",
+    title: "Kontakt",
+    href: "/kontakt",
   },
 ]
 
@@ -42,7 +42,7 @@ export default function index() {
       <div className={styles.body}>
         <div onMouseLeave={() => { setSelectedIndicator(pathname) }} className={styles.nav}>
           <div className={styles.header}>
-            <p>Creativity Era</p>
+            <p>Irfan Yildiz Kernsanierung</p>
           </div>
           {
             navItems.map((data, index) => {

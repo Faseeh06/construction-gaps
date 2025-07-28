@@ -43,6 +43,23 @@
         justify-content: center;
     }
     
+    .modalContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+        color: white;
+    }
+    
+    .modalDescription{
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 1.4;
+        max-width: 300px;
+    }
+    
     .modal img{
         height: auto;
     }
