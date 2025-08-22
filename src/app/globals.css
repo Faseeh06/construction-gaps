@@ -40,6 +40,11 @@
 body{
     overflow-x: hidden;
     font-family: 'Anthro', sans-serif;
+    background-color: #f2f2f2;
+}
+
+html {
+    background-color: #f2f2f2;
 }
 
 :root {

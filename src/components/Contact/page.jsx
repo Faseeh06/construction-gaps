@@ -24,12 +24,12 @@ export default function index() {
                             <Image
                                 fill={true}
                                 alt={"image"}
-                                src="/random/14.jpg"
+                                src="/images/background2.jpg"
                             />
                         </div>
-                        <h2>Bereit für Ihr</h2>
+                        <h2>Ready to build</h2>
                     </span>
-                    <h2>Traumhaus?</h2>
+                    <h2>with Elexima?</h2>
                     <motion.div style={{ x }} className={styles.buttonContainer}>
                         <Rounded backgroundColor={"#334BD3"} className={styles.button}>
                             <p>Jetzt anrufen</p>
@@ -41,35 +41,35 @@ export default function index() {
                 </div>
                 <div className={styles.nav}>
                     <Rounded>
-                        <p>info@irfan-yildiz.de</p>
+                        <p>elexima@elexima.com</p>
                     </Rounded>
                     <Rounded>
-                        <p>+49 30 55540</p>
+                        <p>+92 30 700 800 787</p>
                     </Rounded>
                 </div>
                 <div className={styles.info}>
                     <div>
                         <span>
-                            <h3>Erfahrung</h3>
-                            <p>15+ Jahre</p>
+                            <h3>Experience</h3>
+                            <p>15+ Years</p>
                         </span>
                         <span>
-                            <h3>Projekte</h3>
-                            <p>500+ abgeschlossen</p>
+                            <h3>Projects</h3>
+                            <p>500+ delivered</p>
                         </span>
                     </div>
                     <div>
                         <span>
-                            <h3>Zufriedenheit</h3>
+                            <h3>Satisfaction</h3>
                             <Magnetic>
                                 <p>100%</p>
                             </Magnetic>
                         </span>
                         <Magnetic>
-                            <p>Beratungstermin</p>
+                            <p>Consultation</p>
                         </Magnetic>
                         <Magnetic>
-                            <p>Kostenlose Beratung</p>
+                            <p>Free Consultation</p>
                         </Magnetic>
                         <Magnetic>
                             <p>Google Maps</p>

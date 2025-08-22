@@ -7,27 +7,30 @@ import { motion } from 'framer-motion';
 export default function Home() {
 
     const scrollToNextSection = () => {
-        const nextSection = document.querySelector('[data-section="description"]');
-        if (nextSection) {
-            nextSection.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
+        try {
+            const nextSection = document.querySelector('[data-section="description"]');
+            if (nextSection) {
+                nextSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            } else {
+                // Fallback: scroll to next section
+                window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+                });
+            }
+        } catch (error) {
+            console.error('Scroll error:', error);
         }
     };
 
     return (
         <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
-            <Image
-                src="/images/hero1.jpg"
-                alt="Hero Background"
-                fill={true}
-                className={styles.backgroundImage}
-                priority
-            />
             
             <div className={styles.centerJourneyButton} onClick={scrollToNextSection}>
-                <p>Starte die Reise</p>
+                <p>Start the journey</p>
                 <div className={styles.mouseIcon}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2C8.13 2 5 5.13 5 9v6c0 3.87 3.13 7 7 7s7-3.13 7-7V9c0-3.87-3.13-7-7-7z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -43,8 +46,8 @@ export default function Home() {
             <div className={styles.lowerSection}>
                 <div className={styles.leftSection}>
                     <div className={styles.placeholderTop}>
-                        <h3>BEREIT FÜR IHR TRAUMHAUS?</h3>
-                        <p>Lassen Sie uns gemeinsam Ihr Projekt verwirklichen. Wir bieten Ihnen eine kostenlose Erstberatung und ein unverbindliches Konzept.</p>
+                        <h3>DEMAND MORE FROM YOUR INDUSTRIAL SOLUTION</h3>
+                        <p>Discover our turnkey electronics manufacturing services and how we can help with your next project.</p>
                         <div className={styles.socialLinks}>
                             <div className={styles.socialLink}>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -74,7 +77,7 @@ export default function Home() {
   alignItems: 'center', 
   gap: '8px' 
 }}>
-                            <span>Kontaktiere uns noch heute</span>
+                            <span>Contact us today</span>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 1L15 8L8 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
@@ -84,28 +87,28 @@ export default function Home() {
                 
                 <div className={styles.rightSection}>
                     <div className={styles.placeholderRight1}>
-                        <h3>UNSERE LEISTUNGEN</h3>
-                        <p>Von der ersten Idee bis zur fertigen Umsetzung - wir begleiten Sie durch jeden Schritt Ihrer Kernsanierung mit höchster Qualität und Zuverlässigkeit.</p>
+                        <h3>OUR SERVICES</h3>
+                        <p>Turnkey electronics manufacturing and automation solutions for OEMs and innovators.</p>
                     </div>
                     <div className={styles.placeholderRight2}>
                         <div className={styles.discoverSection}>
                             <div className={styles.teamAvatars}>
                                 <Image 
-                                    src="/images/pfp/pfp1.jpg" 
+                                    src="/images/google.jpg" 
                                     alt="Team Member 1" 
                                     width={65} 
                                     height={65} 
                                     className={styles.avatar}
                                 />
                                 <Image 
-                                    src="/images/pfp/pfp2.jpg" 
+                                    src="/images/decimal.jpg" 
                                     alt="Team Member 2" 
                                     width={65} 
                                     height={65} 
                                     className={styles.avatar}
                                 />
                                 <Image 
-                                    src="/images/pfp/pfp3.jpg" 
+                                    src="/images/powell.jpg" 
                                     alt="Team Member 3" 
                                     width={65} 
                                     height={65} 
@@ -113,7 +116,7 @@ export default function Home() {
                                 />
                             </div>
                             <button style={{ background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', color: '#1a1a1a', display: 'flex', alignItems: 'center', gap: '12px', fontSize: '16px', fontWeight: '500' }}>
-                                <span>Beratungstermin</span>
+                                <span>Consultation</span>
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 1L15 8L8 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>

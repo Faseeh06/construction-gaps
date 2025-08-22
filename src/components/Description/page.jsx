@@ -6,7 +6,7 @@ import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
 export default function index() {
 
-    const phrase = "Von der ersten Idee bis zur fertigen Umsetzung - wir begleiten Sie durch jeden Schritt Ihrer Kernsanierung mit höchster Qualität und Zuverlässigkeit.";
+    const phrase = "Elexima is one of the pioneers in electronics manufacturing services for OEMs and product innovators in Pakistan.";
     const description = useRef(null);
     const isInView = useInView(description)
     return (
@@ -19,10 +19,10 @@ export default function index() {
                         })
                     }
                 </p>
-                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Ihr Experte für professionelle Generalsanierung und modernen Umbau. Wir schaffen Werte, die bleiben.</motion.p>
+                <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Best-in-class EMS partner delivering quality, reliability, and value from concept to production.</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
-                        <p>Mehr </p>
+                        <p>Learn more</p>
                     </Rounded>
                 </div>
             </div>

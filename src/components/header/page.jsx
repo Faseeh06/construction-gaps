@@ -39,8 +39,8 @@ export default function index() {
                 <div className={styles.logo}>
                     <div className={styles.logoImage}>
                         <Image
-                            src="/images/logo.png"
-                            alt="Irfan Yildiz Logo"
+                            src="/images/logo1.png"
+                            alt="Elexima Logo"
                             width={40}
                             height={40}
                             className={styles.headerLogo}
@@ -50,19 +50,19 @@ export default function index() {
                 <div className={styles.nav}>
                     <Magnetic>
                         <div className={styles.el}>
-                            <a>Leistungen</a>
+                            <a>Services</a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
-                            <a>Über uns</a>
+                            <a>About</a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
-                            <a>Projekte</a>
+                            <a>Portfolio</a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
@@ -70,7 +70,7 @@ export default function index() {
                 <div className={styles.rightNav}>
                     <Magnetic>
                         <div className={styles.el}>
-                            <a>Kontakt</a>
+                            <a>Contact</a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>

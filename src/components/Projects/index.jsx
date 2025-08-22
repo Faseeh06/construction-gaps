@@ -9,28 +9,28 @@ import Rounded from '../../common/RoundedButton';
 
 const services = [
   {
-    title: "KERNSANIERUNG",
-    src: "/random/1.jpg",
+    title: "INDUSTRIAL ELECTRONICS MANUFACTURING",
+    src: "/images/hero.png",
     color: "#2C3E50",
-    description: "Komplette Renovierung von Grund auf - von der Planung bis zur Fertigstellung."
+    description: "Manufacture parts and products exactly to client specifications with uncompromising quality and reliability."
   },
   {
-    title: "INNENAUSBAU",
-    src: "/random/2.jpg",
+    title: "R&D, DESIGN & DEVELOPMENT",
+    src: "/images/google.jpg",
     color: "#34495E",
-    description: "Professioneller Innenausbau mit hochwertigen Materialien und modernem Design."
+    description: "End-to-end research, software, optics and product development for medical, industrial and special-purpose applications."
   },
   {
-    title: "ROHBAU",
-    src: "/random/4.jpg",
+    title: "AUTOMATION SOLUTIONS",
+    src: "/images/locomotive.png",
     color: "#5D6D7E",
-    description: "Solide Grundstruktur mit höchsten Baustandards und höchster Qualität."
+    description: "From concept to fully realized automation systems including AOI and vision-based inspection."
   },
   {
-    title: "ENERGIEEFFIZIENZ",
-    src: "/random/5.jpg",
+    title: "INDUSTRIAL ELECTRONICS REPAIR",
+    src: "/images/decimal.jpg",
     color: "#85929E",
-    description: "Nachhaltige Lösungen für optimale Energieeffizienz und hohen Komfort."
+    description: "Comprehensive repair and optimization services to keep your operations running."
   }
 ]
 
@@ -92,7 +92,7 @@ export default function Home() {
         }
       </div>
       <Rounded>
-        <p>Alle Leistungen</p>
+        <p>All Services</p>
       </Rounded>
       <>
         <motion.div ref={modalContainer} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"} className={styles.modalContainer}>
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
         </motion.div>
         <motion.div ref={cursor} className={styles.cursor} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
-        <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>Erkunden </motion.div>
+        <motion.div ref={cursorLabel} className={styles.cursorLabel} variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>Explore</motion.div>
       </>
     </main>
   )

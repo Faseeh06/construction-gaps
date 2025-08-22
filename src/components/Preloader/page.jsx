@@ -37,8 +37,8 @@ export default function Index() {
                         className={styles.logoContainer}
                     >
                         <Image
-                            src="/images/logo.png"
-                            alt="Irfan Yildiz Logo"
+                            src="/images/logo1.png"
+                            alt="Elexima Logo"
                             width={200}
                             height={200}
                             className={styles.logo}

@@ -1,205 +1,473 @@
+@font-face {
+    font-family: 'rf-dewi';
+    src: url('/fonts/rf-dewi/RFDewi-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rf-dewi';
+    src: url('/fonts/rf-dewi/RFDewi-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rf-dewi';
+    src: url('/fonts/rf-dewi/RFDewi-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
 .footer {
-    background: white;
-    padding: 80px 0 30px;
+    min-height: 100vh;
+    background: #f2f2f2;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    font-family: 'Anthro', sans-serif;
+    padding: 60px 20px 20px 20px;
+    font-family: 'rf-dewi', sans-serif;
+    position: relative;
 }
 
-.container {
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0 80px;
-}
-
-.urgentCall {
-    font-size: 16px;
-    color: #666;
-    margin: 0 0 30px 0;
-    text-align: center;
-    font-family: 'Anthro', sans-serif;
-}
-
-.footerContent {
-    background: #2a2a2a;
-    border-radius: 40px;
-    padding: 60px 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 60px;
-    margin-bottom: 40px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.brand {
-    h3 {
-        font-size: 28px;
-        font-weight: 500;
-        margin: 0 0 15px 0;
-        color: white;
-        font-family: 'BodyTextLargeBold', sans-serif;
-    }
-
-    p {
-        font-size: 16px;
-        color: #e0e0e0;
-        margin: 0 0 20px 0;
-        line-height: 1.6;
-        font-family: 'Anthro', sans-serif;
-    }
-
-    .redDot {
-        width: 8px;
-        height: 8px;
-        background: #e74c3c;
-        border-radius: 50%;
-        display: inline-block;
-        margin-left: 8px;
+/* Top Header */
+.topHeader {
+    width: 100%;
+    max-width: 1330px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+    .topLeft,
+    .topRight {
+        font-size: 13px;
+        color: #666;
+        font-weight: normal;
+        font-family: 'rf-dewi', sans-serif;
     }
 }
 
-.navigation {
-    h4 {
+/* Main Header */
+.mainHeader {
+    margin-bottom: 25px;
+    
+    .headerTitle {
         font-size: 18px;
-        font-weight: 500;
-        margin: 0 0 20px 0;
-        color: white;
-        font-family: 'BodyTextLargeBold', sans-serif;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
+        font-weight: bold;
+        color: #000;
+        letter-spacing: 0.15em;
+        text-align: center;
         margin: 0;
+        font-family: 'rf-dewi', sans-serif;
+    }
+}
 
-        li {
-            margin-bottom: 12px;
+/* Horizontal Line */
+.horizontalLine {
+    width: 100%;
+    max-width: 1330px;
+    height: 1px;
+    background-color: #333;
+    margin-bottom: 40px;
+}
 
-            a {
-                color: #e0e0e0;
-                text-decoration: none;
-                font-size: 16px;
-                font-family: 'Anthro', sans-serif;
-                transition: color 0.3s ease;
+/* Content Grid */
+.contentGrid {
+    width: 100%;
+    max-width: 1330px;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    gap: 60px;
+    margin-bottom: 50px;
+    align-items: start;
+}
 
+/* Vertical Lines */
+.verticalLine {
+    width: 1px;
+    height: 100%;
+    background-color: #333;
+    justify-self: center;
+    align-self: stretch;
+}
+
+/* Left Section */
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    .expandButton {
+        width: 48px;
+        height: 48px;
+        background: #000;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 25px;
+        cursor: pointer;
+        border: none;
+        
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    .companyName {
+        font-size: 56px;
+        font-weight: 900;   
+        color: #000;
+        margin: 0 0 8px 0;
+        font-family: 'rf-dewi', sans-serif;
+        line-height: 1.1;
+    }
+    
+    .companyDescription {
+        font-size: 18px;
+        color: #333;
+        line-height: 1.3;
+        margin: 0 0 45px 0;
+        font-family: 'rf-dewi', sans-serif;
+        font-weight: normal;
+    }
+    
+    .navigationSection {
+        margin-bottom: 25px;
+        width: 100%;
+        
+        .navigationTitle {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            margin: 6px 0;
+            letter-spacing: 0.05em;
+            font-family: 'rf-dewi', sans-serif;
+        }
+        
+        .navigationLine {
+            width: 352px;
+            height: 1px;
+            background-color: #000;
+        }
+    }
+    
+    .profileImage {
+        width: 352px;
+        height: 440px;
+        overflow: hidden;
+        border-radius: 6px;
+        
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+    }
+}
+
+/* Center Section */
+.centerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    
+    .expandButton {
+        width: 48px;
+        height: 48px;
+        background: #000;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 25px;
+        cursor: pointer;
+        border: none;
+        
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    .logoContainer {
+        margin-bottom: 35px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+        .logo {
+            width: 280px;
+            height: 80px;
+        }
+    }
+    
+    .contactDescription {
+        margin-bottom: 25px;
+        
+        p {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 3px 0;
+            line-height: 1.3;
+            font-family: 'rf-dewi', sans-serif;
+            font-weight: normal;
+        }
+    }
+    
+    .phoneSection {
+        margin-bottom: 35px;
+        
+        .phoneNumber {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            font-family: 'rf-dewi', sans-serif;
+        }
+    }
+    
+    .horizontalDivider {
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        margin-bottom: 25px;
+        
+        & + .horizontalDivider {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+    }
+    
+    .addressSection {
+        .addressTitle {
+            font-size: 22px;
+            font-weight: 600;
+            color: #000;
+            margin: 0 0 25px 0;
+            font-family: 'rf-dewi', sans-serif;
+        }
+        
+        .address {
+            font-size: 22px;
+            font-weight: 600;
+            color: #000;
+            margin: 0 0 25px 0;
+            font-family: 'rf-dewi', sans-serif;
+        }
+        
+        .phoneDetail {
+            font-size: 22px;
+            font-weight: 600;
+            color: #000;
+            margin: 0 0 25px 0;
+            font-family: 'rf-dewi', sans-serif;
+        }
+        
+        .additionalInfo {
+            font-size: 22px;
+            font-weight: 600;
+            color: #000;
+            margin: 0;
+            font-family: 'rf-dewi', sans-serif;
+        }
+    }
+}
+
+/* Right Section */
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    .expandButton {
+        width: 48px;
+        height: 48px;
+        background: #000;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 25px;
+        cursor: pointer;
+        border: none;
+        
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    .followTitle,
+    .followSubtitle {
+        font-size: 65px;
+        font-weight: 900;
+        color: #000;
+        margin: 0 0 5px 0;
+        font-family: 'rf-dewi', sans-serif;
+        line-height: 1.1;
+    }
+    
+    .followSubtitle {
+        margin-bottom: 35px;
+    }
+    
+    .followDescription {
+        margin-bottom: 35px;
+        text-align: center;
+        
+        p {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 3px 0;
+            line-height: 1.3;
+            font-family: 'rf-dewi', sans-serif;
+            font-weight: normal;
+        }
+    }
+    
+    .horizontalDivider {
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        margin-bottom: 25px;
+        
+        & + .horizontalDivider {
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+    }
+    
+    .impressumSection {
+        text-align: center;
+        
+        .impressumTitle {
+            font-size: 22px;
+            font-weight: 600;
+            color: #000;
+            margin: 0 0 25px 0;
+            font-family: 'rf-dewi', sans-serif;
+        }
+        
+        .socialIcons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 18px;
+            justify-content: center;
+            
+            .socialIcon {
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: opacity 0.3s ease;
+                
                 &:hover {
-                    color: white;
+                    opacity: 0.8;
+                }
+                
+                svg {
+                    display: block;
                 }
             }
         }
-    }
-}
-
-.contact {
-    h4 {
-        font-size: 18px;
-        font-weight: 500;
-        margin: 0 0 20px 0;
-        color: white;
-        font-family: 'BodyTextLargeBold', sans-serif;
-    }
-
-    p {
-        font-size: 16px;
-        color: #e0e0e0;
-        margin: 0 0 12px 0;
-        font-family: 'Anthro', sans-serif;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-
-        &:last-child {
-            margin-bottom: 0;
+        
+        .legalNote {
+            font-size: 22px;
+            font-weight: 600;
+            color: #000;
+            margin: 0;
+            font-family: 'rf-dewi', sans-serif;
         }
     }
 }
 
-.social {
-    h4 {
-        font-size: 18px;
-        font-weight: 500;
-        margin: 0 0 20px 0;
-        color: white;
-        font-family: 'BodyTextLargeBold', sans-serif;
-    }
-
-    .socialLinks {
-        display: flex;
-        gap: 16px;
-
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-
-            &:hover {
-                background: rgba(255, 255, 255, 0.2);
-                transform: translateY(-2px);
-            }
-
-            svg {
-                width: 18px;
-                height: 18px;
-            }
-        }
-    }
-}
-
-.copyright {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    border-top: 1px solid #e0e0e0;
-
-    p {
-        font-size: 14px;
-        color: #666;
-        margin: 0;
-        font-family: 'Anthro', sans-serif;
-    }
-
-    .legalLinks {
-        display: flex;
-        gap: 20px;
-
-        a {
+/* Bottom Section */
+    .bottomSection {
+        width: 100%;
+        max-width: 1330px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    
+            .copyright {
+            font-size: 15px;
             color: #666;
-            text-decoration: none;
-            font-size: 14px;
-            font-family: 'Anthro', sans-serif;
-            transition: color 0.3s ease;
-
-            &:hover {
-                color: #333;
+            margin: 0;
+            font-family: 'rf-dewi', sans-serif;
+            font-weight: 400;
+            
+            strong {
+                font-weight: 00;
+                color: #000;
             }
         }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 600px;
+    }
+    
+    .verticalLine {
+        display: none;
+    }
+    
+    .leftSection,
+    .rightSection {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .rightSection .impressumSection .socialIcons {
+        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
+    .footer {
+        padding: 40px 20px;
     }
-
-    .footerContent {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 40px 30px;
-        border-radius: 25px;
-    }
-
-    .copyright {
+    
+    .topHeader {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         text-align: center;
     }
-} 
+    
+    .leftSection .companyName,
+    .rightSection .followTitle,
+    .rightSection .followSubtitle {
+        font-size: 36px;
+    }
+    
+    .leftSection .profileImage {
+        width: 220px;
+        height: 280px;
+    }
+    
+    .leftSection .navigationSection .navigationLine {
+        width: 220px;
+    }
+}

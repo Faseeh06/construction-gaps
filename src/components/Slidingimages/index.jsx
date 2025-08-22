@@ -7,46 +7,46 @@ import Image from 'next/image';
 const slider1 = [
     {
         color: "#2C3E50",
-        src: "/random/6.jpg",
-        title: "Kernsanierung"
+        src: "/images/panda.jpg",
+        title: "Industrial Electronics"
     },
     {
         color: "#34495E",
-        src: "/random/7.jpg",
-        title: "Innenausbau"
+        src: "/images/wix.jpg",
+        title: "R&D and Development"
     },
     {
         color: "#5D6D7E",
-        src: "/random/8.jpg",
-        title: "Rohbau"
+        src: "/images/silencio.png",
+        title: "Automation Solutions"
     },
     {
         color: "#85929E",
-        src: "/random/9.jpg",
-        title: "Energieeffizienz"
+        src: "/images/officestudio.png",
+        title: "Electronics Repair"
     }
 ]
 
 const slider2 = [
     {
         color: "#2C3E50",
-        src: "/random/10.jpg",
-        title: "500+ Projekte"
+        src: "/images/powell.jpg",
+        title: "500+ Projects"
     },
     {
         color: "#34495E",
-        src: "/random/11.jpg",
-        title: "15+ Jahre"
+        src: "/images/funny.jpg",
+        title: "15+ Years"
     },
     {
         color: "#5D6D7E",
-        src: "/random/12.jpg",
-        title: "100% Zufriedenheit"
+        src: "/images/maven.jpg",
+        title: "100% Satisfaction"
     },
     {
         color: "#85929E",
-        src: "/random/13.jpg",
-        title: "Kostenlose Beratung"
+        src: "/images/c2.jpg",
+        title: "Free Consultation"
     }
 ]
 
