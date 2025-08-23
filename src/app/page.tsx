@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Header from '../components/header/page'
 import Landing from '../components/landing/page'
+import ExpertiseSection from '../components/ExpertiseSection/page'
 import ServicesSection from '../components/ServicesSection/page'
 import FeedbackSection from '../components/FeedbackSection/page'
 import FAQSection from '../components/FAQSection/page'
@@ -109,14 +110,15 @@ export default function Home() {
       <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>
-      <div data-scroll-container style={{ minHeight: '100vh' }}>
-        <Landing />
-        <ServicesSection />
-        <FeedbackSection />
-        <FAQSection />
-        <ContactSection />
-        <Footer />
-      </div>
+                 <div data-scroll-container style={{ minHeight: '100vh' }}>
+             <Landing />
+             <ExpertiseSection />
+             <ServicesSection />
+             <FeedbackSection />
+             <FAQSection />
+             <ContactSection />
+             <Footer />
+           </div>
     </>
   );
 }

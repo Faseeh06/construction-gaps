@@ -31,14 +31,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
-    align-items: stretch;
+    align-items: start;
 }
 
 /* Left Section - Contact Form */
 .leftSection {
-    min-height: 600px;
+    height: 700px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     
     .title {
         font-size: 48px;
@@ -134,7 +135,8 @@
     max-width: 450px;
     margin: 0 auto;
     border: 1px solid #000;
-    min-height: 600px;
+    height: 700px;
+    justify-content: space-between;
 }
 
 .avatarContainer {
@@ -142,15 +144,15 @@
     margin-bottom: 25px;
     
     .avatarCard {
-        width: 150px;
-        height: 150px;
-        background: #4a4a4a;
+        width: 350px;
+        height: 390px;
+        background: transparent;
         border-radius: 25px;
-        padding: 8px;
+        padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 8px solid #d0d0d0;
+        border: none;
     }
     
     .avatarImage {
@@ -163,11 +165,11 @@
     
     .avatarIcon {
         position: absolute;
-        bottom: -20px;
+        bottom: -40px;
         left: 50%;
         transform: translateX(-50%);
-        width: 50px;
-        height: 50px;
+        width: 65px;
+        height: 65px;
         background: #000;
         border-radius: 50%;
         display: flex;
@@ -226,11 +228,12 @@
 }
 
 .statusIndicator {
-    width: 16px;
-    height: 16px;
+    width: 40px;
+    height: 40px;
     background: #000;
     border-radius: 50%;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 /* Right Section - Contact Info */
@@ -239,18 +242,21 @@
     margin: 0;
     display: flex;
     justify-content: center;
-    min-height: 600px;
+    height: 700px;
 }
 
 .contactCard {
     background: #e5e8de;
     padding: 30px 25px 220px 25px;
-    border-radius: 25px 25px 0 0;
+    border-radius: 25px;
     position: relative;
     color: #333;
     max-width: 320px;
     width: 100%;
     margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .locationIcon {
@@ -333,11 +339,12 @@
     bottom: 0;
     left: 0;
     right: 0;
+    height: 220px;
     
     .mapTitle {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 600;
-        color: white;
+        color: black;
         margin: 0 0 15px 0;
         font-family: 'rf-dewi', sans-serif;
     }
@@ -374,8 +381,8 @@
             }
             
             span {
-                font-size: 12px;
-                color: white;
+                font-size: 16px;
+                color: black;
                 font-family: 'rf-dewi', sans-serif;
                 line-height: 1.3;
                 text-align: center;

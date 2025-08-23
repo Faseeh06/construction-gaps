@@ -9,7 +9,7 @@ export default function ServicesSection() {
             subtitle: "Rohkabu",
             description: "Komplette entthizeng",
             details: "Complète fondé eintägsh ettlüztstemlitung",
-            image: "/images/c2montreal.png"
+            image: "/images/column.jpg"
         },
         {
             id: 2,
@@ -17,7 +17,7 @@ export default function ServicesSection() {
             subtitle: "Rohbaul",
             description: "Komplettee entäingung",
             details: "Complète heete ektaméön enthëéütterléung",
-            image: "/images/newbg1.jpg"
+            image: "/images/column.jpg"
         },
         {
             id: 3,
@@ -25,7 +25,7 @@ export default function ServicesSection() {
             subtitle: "Rez",
             description: "Complèt einegen",
             details: "Komplète heette ehrdréeh eintëerlexttartung",
-            image: "/images/funny.jpg"
+            image: "/images/column.jpg"
         }
     ]
 
@@ -99,7 +99,7 @@ export default function ServicesSection() {
                                         <path d="M9 21v-6a1 1 0 011-1h4a1 1 0 011 1v6"/>
                                     </svg>
                                 </div>
-                                <span>15. vainähr</span>
+                                <span>vainähr</span>
                             </div>
                     </div>
                     <div className={styles.textItem}>
