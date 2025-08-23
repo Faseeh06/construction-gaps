@@ -2,9 +2,7 @@
 import Image from "next/image";
 import Header from '../components/header/page'
 import Landing from '../components/landing/page'
-import Features from '../components/Features/page'
-import HouseLayout from '../components/HouseLayout/page'
-import RecentPhotos from '../components/RecentPhotos/page'
+import ServicesSection from '../components/ServicesSection/page'
 import FeedbackSection from '../components/FeedbackSection/page'
 import FAQSection from '../components/FAQSection/page'
 import ContactSection from '../components/ContactSection/page'
@@ -113,9 +111,7 @@ export default function Home() {
       </AnimatePresence>
       <div data-scroll-container style={{ minHeight: '100vh' }}>
         <Landing />
-        <Features />
-        <HouseLayout />
-        <RecentPhotos />
+        <ServicesSection />
         <FeedbackSection />
         <FAQSection />
         <ContactSection />
