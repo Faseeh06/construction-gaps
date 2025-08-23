@@ -5,6 +5,7 @@ import Landing from '../components/landing/page'
 import Features from '../components/Features/page'
 import HouseLayout from '../components/HouseLayout/page'
 import RecentPhotos from '../components/RecentPhotos/page'
+import FeedbackSection from '../components/FeedbackSection/page'
 import FAQSection from '../components/FAQSection/page'
 import ContactSection from '../components/ContactSection/page'
 import Footer from '../components/Footer/page'
@@ -115,6 +116,7 @@ export default function Home() {
         <Features />
         <HouseLayout />
         <RecentPhotos />
+        <FeedbackSection />
         <FAQSection />
         <ContactSection />
         <Footer />
