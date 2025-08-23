@@ -21,7 +21,7 @@
 
 .contactSection {
     padding: 80px 20px;
-    background: #f8f8f8;
+    background: #f2f2f2;
     font-family: 'rf-dewi', sans-serif;
 }
 
@@ -29,13 +29,17 @@
     max-width: 1330px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 0.8fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
-    align-items: start;
+    align-items: stretch;
 }
 
 /* Left Section - Contact Form */
 .leftSection {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    
     .title {
         font-size: 48px;
         font-weight: bold;
@@ -69,7 +73,7 @@
         border-radius: 12px;
         font-size: 14px;
         font-family: 'rf-dewi', sans-serif;
-        background: #f8f8f8;
+        background: #f2f2f2;
         transition: all 0.3s ease;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         
@@ -97,7 +101,7 @@
     color: black;
     border: 1px solid black;
     padding: 12px 24px;
-    border-radius: 25px;
+    border-radius: 8px;
     font-size: 16px;
     font-weight: 700;
     font-family: 'rf-dewi', sans-serif;
@@ -123,12 +127,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: #f0f0f0;
-    padding: 30px 25px 40px 25px;
-    border-radius: 25px;
+    background: transparent;
+    padding: 50px 35px 60px 35px;
+    border-radius: 50px 50px 0 0;
     position: relative;
-    max-width: 280px;
+    max-width: 450px;
     margin: 0 auto;
+    border: 1px solid #000;
+    min-height: 600px;
 }
 
 .avatarContainer {
@@ -167,7 +173,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 6px solid #f0f0f0;
+        border: 6px solid transparent;
         z-index: 2;
     }
 }
@@ -178,11 +184,17 @@
     color: #000;
     margin: 0 0 15px 0;
     font-family: 'rf-dewi', sans-serif;
+    text-align: center;
+    width: 100%;
 }
 
 .consultantInfo {
     text-align: center;
     margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
     .consultantName {
         font-size: 14px;
@@ -191,6 +203,7 @@
         margin: 0 0 3px 0;
         font-family: 'rf-dewi', sans-serif;
         line-height: 1.3;
+        text-align: center;
     }
     
     .consultantEmail {
@@ -199,6 +212,7 @@
         margin: 0 0 3px 0;
         font-family: 'rf-dewi', sans-serif;
         line-height: 1.3;
+        text-align: center;
     }
     
     .consultantDate {
@@ -207,6 +221,7 @@
         margin: 0;
         font-family: 'rf-dewi', sans-serif;
         line-height: 1.3;
+        text-align: center;
     }
 }
 
@@ -220,16 +235,22 @@
 
 /* Right Section - Contact Info */
 .rightSection {
-    max-width: 280px;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 600px;
 }
 
 .contactCard {
-    background: #f0f0f0;
-    padding: 30px 25px;
-    border-radius: 25px;
+    background: #e5e8de;
+    padding: 30px 25px 220px 25px;
+    border-radius: 25px 25px 0 0;
     position: relative;
     color: #333;
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .locationIcon {
@@ -298,10 +319,20 @@
 }
 
 .mapSection {
-    background: #2f4f4f;
+    background: #83afbf;
     padding: 20px;
-    border-radius: 20px;
     color: white;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    border-radius: 0 0 25px 25px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     
     .mapTitle {
         font-size: 14px;
@@ -312,11 +343,20 @@
     }
     
     .mapDetails {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
         .mapItem {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            width: 100%;
             
             .mapIcon {
                 width: 16px;
@@ -338,6 +378,7 @@
                 color: white;
                 font-family: 'rf-dewi', sans-serif;
                 line-height: 1.3;
+                text-align: center;
             }
         }
     }
