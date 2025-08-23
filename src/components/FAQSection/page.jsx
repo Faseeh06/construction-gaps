@@ -23,8 +23,8 @@ export default function FAQSection() {
         },
         {
             id: 4,
-            question: "Noch grägen?",
-            answer: "Jetzt kontakt 40%"
+            question: "Noch grägen Lorem ?",
+            answer: "Lorem Ipsum dolor jaaasd kdsas Lorem Ipsum dolor jaaasd kdsas"
         }
     ]
 
@@ -83,12 +83,10 @@ export default function FAQSection() {
                                 
                             </div>
                             
-                            <div className={styles.cardIcon}>
-                                <div className={styles.iconCircle}>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 9l-7 7-7-7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    </svg>
-                                </div>
+                            <div className={styles.moreButton}>
+                                <button className={styles.moreBtn}>
+                                    More
+                                </button>
                             </div>
                         </div>
                     ))}

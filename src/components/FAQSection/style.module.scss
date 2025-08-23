@@ -42,44 +42,53 @@
 }
 
 /* Left Content */
-.leftContent {
-    .mainTitle {
-        font-size: 72px;
-        font-weight: 900;
-        color: #000;
-        margin: 0 0 30px 0;
-        font-family: 'rf-dewi', sans-serif;
-        line-height: 1.1;
-    }
-    
-    .subtitle {
-        font-size: 18px;
-        font-weight: 600;
-        color: #000;
-        margin: 0 0 25px 0;
-        font-family: 'rf-dewi', sans-serif;
-        line-height: 1.4;
-    }
-    
-    .description {
-        font-size: 16px;
-        color: #666;
-        margin: 0 0 40px 0;
-        font-family: 'rf-dewi', sans-serif;
-        line-height: 1.5;
-    }
+ .leftContent {
+     .mainTitle {
+         font-size: 74px;
+         font-weight: 1000;
+         color: #000;
+         margin: 20px 0 30px 0;
+         font-family: 'rf-dewi', sans-serif;
+         line-height: 1.1;
+     }
+     
+     .subtitle {
+         font-size: 20px;
+         font-weight: 700;
+         color: #000;
+         margin: 0 0 25px 0;
+         font-family: 'rf-dewi', sans-serif;
+         line-height: 1.4;
+     }
+     
+     .description {
+         font-size: 18px;
+         color: #666;
+         margin: 0 0 40px 0;
+         font-family: 'rf-dewi', sans-serif;
+         line-height: 1.5;
+     }
     
     .readMoreBtn {
         background: #83afbf;
         color: black;
-        border: none;
+        border: 1px solid black;
         padding: 12px 24px;
         border-radius: 25px;
-        font-size: 14px;
-        font-weight: 600;
+        font-size: 16px;
+        font-weight: 700;
         font-family: 'rf-dewi', sans-serif;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+        &::before {
+            content: "↓";
+            font-size: 18px;
+            font-weight: bold;
+        }
         
         &:hover {
             background: #6b9aac;
@@ -93,6 +102,7 @@
     flex-direction: column;
     gap: 20px;
     justify-content: flex-start;
+    margin-top: 200px;
 }
 
 .chatInterface {
@@ -103,19 +113,21 @@
     
     .chatTitle {
         text-align: center;
-        font-size: 18px;
-        font-weight: 600;
+        font-size: 24px;
+        font-weight: 900;
         color: #000;
         margin: 0 0 15px 0;
         font-family: 'rf-dewi', sans-serif;
-        background: transparent;
-        border: 2px solid #999;
+        background: #e5e8de;
+        border: 1px solid #000;
         border-radius: 25px;
-        padding: 12px 20px;
+        padding: 12px 30px;
+        width: 380px;
+        
     }
     
     .chatSubtitle {
-        font-size: 13px;
+        font-size: 15px;
         color: #666;
         margin: 0 0 20px 0;
         font-family: 'rf-dewi', sans-serif;
@@ -126,11 +138,11 @@
     .chatButton {
         background: #83afbf;
         color: black;
-        border: none;
+        border: 1px solid black;
         padding: 12px 24px;
         border-radius: 25px;
-        font-size: 13px;
-        font-weight: 600;
+        font-size: 15px;
+        font-weight: 700;
         font-family: 'rf-dewi', sans-serif;
         cursor: pointer;
         transition: background-color 0.3s ease;
@@ -139,8 +151,9 @@
         gap: 8px;
         
         &::before {
-            content: "▼";
-            font-size: 10px;
+            content: "↓";
+            font-size: 18px;
+            font-weight: bold;
         }
         
         &:hover {
@@ -198,34 +211,34 @@
             font-size: 16px;
             color: #ccc;
             margin: 0;
+            padding: 10px;
             font-family: 'rf-dewi', sans-serif;
             line-height: 1.4;
             font-weight: normal;
         }
     }
     
-    .cardIcon {
+    .moreButton {
         position: absolute;
         bottom: 20px;
-        right: 20px;
+        left: 20px;
         
-        .iconCircle {
-            width: 35px;
-            height: 35px;
+        .moreBtn {
             background: #555;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: black;
+            border: none;
+            border-radius: 20px;
+            padding: 6px 20px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: 'rf-dewi', sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
             
-            svg {
-                transition: transform 0.3s ease;
+            &:hover {
+                background: #666;
             }
         }
-    }
-    
-    &.active .cardIcon .iconCircle svg {
-        transform: rotate(180deg);
     }
 }
 

@@ -29,7 +29,7 @@
     max-width: 1330px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.8fr 1fr 1fr;
     gap: 60px;
     align-items: start;
 }
@@ -64,45 +64,49 @@
     .input,
     .textarea {
         width: 100%;
-        padding: 16px 20px;
+        padding: 12px 16px;
         border: 1px solid #ddd;
-        border-radius: 8px;
-        font-size: 16px;
+        border-radius: 12px;
+        font-size: 14px;
         font-family: 'rf-dewi', sans-serif;
-        background: #fff;
-        transition: border-color 0.3s ease;
+        background: #f8f8f8;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         
         &:focus {
             outline: none;
-            border-color: #007bff;
+            border-color: #83afbf;
+            box-shadow: 0 4px 8px rgba(131, 175, 191, 0.2);
+            background: #fff;
         }
         
         &::placeholder {
             color: #999;
+            font-size: 13px;
         }
     }
     
     .textarea {
         resize: vertical;
-        min-height: 120px;
+        min-height: 80px;
     }
 }
 
 .submitButton {
-    background: #ff4444;
-    color: white;
-    border: none;
-    padding: 16px 32px;
-    border-radius: 8px;
+    background: #83afbf;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 24px;
+    border-radius: 25px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     font-family: 'rf-dewi', sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
     align-self: flex-start;
     
     &:hover {
-        background: #e03c3c;
+        background: #6b9aac;
     }
 }
 
@@ -132,8 +136,8 @@
     margin-bottom: 25px;
     
     .avatarCard {
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
         background: #4a4a4a;
         border-radius: 25px;
         padding: 8px;
@@ -371,8 +375,8 @@
     }
     
     .avatarContainer .avatarCard {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
     
     .rightSection {
