@@ -5,7 +5,8 @@ import Landing from '../components/landing/page'
 import Features from '../components/Features/page'
 import HouseLayout from '../components/HouseLayout/page'
 import RecentPhotos from '../components/RecentPhotos/page'
-import ContactForm from '../components/ContactForm/page'
+import FAQSection from '../components/FAQSection/page'
+import ContactSection from '../components/ContactSection/page'
 import Footer from '../components/Footer/page'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
@@ -114,7 +115,8 @@ export default function Home() {
         <Features />
         <HouseLayout />
         <RecentPhotos />
-        <ContactForm />
+        <FAQSection />
+        <ContactSection />
         <Footer />
       </div>
     </>
