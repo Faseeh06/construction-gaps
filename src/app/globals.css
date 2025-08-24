@@ -37,14 +37,24 @@
     font-style: normal;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     overflow-x: hidden;
     font-family: 'Anthro', sans-serif;
-    background-color: #f2f2f2;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    background-color: #f2f2f2;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
