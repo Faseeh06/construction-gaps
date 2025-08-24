@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS Reset - Remove all default margins, padding, and borders */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure no white boundaries anywhere */
+html, body, #__next, #root {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+    background-color: #000000 !important;
+    color: #ffffff;
+    min-height: 100vh;
+    width: 100%;
+}
+
+body {
+    font-family: 'Anthro', sans-serif;
+    background-color: #000000 !important;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html {
+    background-color: #000000 !important;
+    min-height: 100vh;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Override any Tailwind base styles that might add margins */
+@layer base {
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #000000 !important;
+    }
+}
+
 @font-face {
     font-family: 'Anthro';
     src: url('/fonts/anthro/AnthroTrial-Light-BF642635db1f586.otf') format('opentype');
@@ -35,26 +78,6 @@
     src: url('/fonts/Body Text Large Bold/Body Text Large Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    overflow-x: hidden;
-    font-family: 'Anthro', sans-serif;
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
 }
 
 :root {

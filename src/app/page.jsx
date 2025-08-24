@@ -18,7 +18,7 @@ export default function Home() {
 
   // Global error handler for DOM operations
   useEffect(() => {
-    const handleError = (event: ErrorEvent) => {
+    const handleError = (event) => {
       if (event.error && event.error.message && event.error.message.includes('removeChild')) {
         console.warn('DOM removeChild error caught and handled:', event.error);
         event.preventDefault();
@@ -31,9 +31,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    let locomotiveScroll: any = null;
+    let locomotiveScroll = null;
     let isDestroyed = false;
-    let initTimeout: NodeJS.Timeout | null = null;
+    let initTimeout = null;
     
     const initScroll = async () => {
       try {
@@ -46,7 +46,7 @@ export default function Home() {
         }
 
         // Check if container exists and is valid
-        const scrollContainer = document.querySelector('[data-scroll-container]') as HTMLElement;
+        const scrollContainer = document.querySelector('[data-scroll-container]');
         if (!scrollContainer || !scrollContainer.isConnected) {
           return;
         }
