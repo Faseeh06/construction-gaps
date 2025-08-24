@@ -4,7 +4,7 @@ import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { slideUp, opacity } from './animation';
 import Rounded from '../../common/RoundedButton';
-export default function index() {
+export default function Description() {
 
     const phrase = "Elexima is one of the pioneers in electronics manufacturing services for OEMs and product innovators in Pakistan.";
     const description = useRef(null);

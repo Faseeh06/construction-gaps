@@ -18,7 +18,7 @@ export default function Home() {
 
   // Global error handler for DOM operations
   useEffect(() => {
-    const handleError = (event) => {
+    const handleError = (event: ErrorEvent) => {
       if (event.error && event.error.message && event.error.message.includes('removeChild')) {
         console.warn('DOM removeChild error caught and handled:', event.error);
         event.preventDefault();
@@ -31,9 +31,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    let locomotiveScroll = null;
+    let locomotiveScroll: any = null;
     let isDestroyed = false;
-    let initTimeout = null;
+    let initTimeout: NodeJS.Timeout | null = null;
     
     const initScroll = async () => {
       try {
@@ -46,26 +46,25 @@ export default function Home() {
         }
 
         // Check if container exists and is valid
-        const scrollContainer = document.querySelector('[data-scroll-container]');
+        const scrollContainer = document.querySelector('[data-scroll-container]') as HTMLElement;
         if (!scrollContainer || !scrollContainer.isConnected) {
           return;
         }
 
         // Import Locomotive Scroll only when needed
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        // const LocomotiveScroll = (await import('locomotive-scroll')).default;
         
         // Create new instance only if not already created
-        if (!locomotiveScroll && !isDestroyed) {
-          locomotiveScroll = new LocomotiveScroll({
-            el: scrollContainer,
-            smooth: true,
-            lerp: 0.1,
-            multiplier: 1,
-            reloadOnContextChange: true,
-            touchMultiplier: 2,
-            smoothMobile: false
-          });
-        }
+        // if (!locomotiveScroll && !isDestroyed) {
+        //   locomotiveScroll = new LocomotiveScroll({
+        //     container: scrollContainer,
+        //     smooth: true,
+        //     lerp: 0.1,
+        //     multiplier: 1,
+        //     reloadOnContextChange: true,
+        //     touchMultiplier: 2
+        //   });
+        // }
       } catch (error) {
         console.error('Locomotive Scroll initialization error:', error);
       }

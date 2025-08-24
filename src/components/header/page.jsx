@@ -3,14 +3,14 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence } from 'framer-motion';
-import Nav from './nav';
+import Navigation from './nav';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
 import Image from 'next/image';
 
-export default function index() {
+export default function Header() {
     const header = useRef(null);
     const [isActive, setIsActive] = useState(false);
     const pathname = usePathname();
@@ -18,7 +18,7 @@ export default function index() {
 
     useEffect(() => {
         if (isActive) setIsActive(false)
-    }, [pathname])
+    }, [pathname, isActive])
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
@@ -82,7 +82,7 @@ export default function index() {
                 </Rounded>
             </div>
             <AnimatePresence mode="wait">
-                {isActive && <Nav />}
+                {isActive && <Navigation />}
             </AnimatePresence>
         </>
     )
