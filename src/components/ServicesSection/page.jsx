@@ -57,12 +57,6 @@ export default function ServicesSection() {
                                 <div 
                                     key={service.id} 
                                     className={styles.serviceCard}
-                                    style={{
-                                        backgroundImage: `url(${service.image})`,
-                                        backgroundSize: 'cover',
-                                        backgroundPosition: 'center',
-                                        backgroundRepeat: 'no-repeat'
-                                    }}
                                 >
                                     <div className={styles.cardContent}>
                                         <div className={styles.cardHeader}>
@@ -72,6 +66,7 @@ export default function ServicesSection() {
                                         <p className={styles.serviceDescription}>{service.description}</p>
                                         <p className={styles.serviceDetails}>{service.details}</p>
                                     </div>
+                                    <div className={styles.cardImage} />
                                 </div>
                             ))}
                         </div>
