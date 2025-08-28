@@ -21,7 +21,7 @@
 
 .feedbackSection {
     padding: 80px 0;
-    background: #f2f2f2;
+    background: var(--bg);
     font-family: 'rf-dewi', sans-serif;
     min-height: 100vh;
     display: flex;
@@ -45,7 +45,7 @@
     .mainTitle {
         font-size: 74px;
         font-weight: 1000;
-        color: #000;
+        color: var(--text);
         margin: 0 0 30px 0;
         font-family: 'rf-dewi', sans-serif;
         line-height: 1.1;
@@ -53,7 +53,7 @@
     
     .subtitle {
         font-size: 18px;
-        color: #666;
+        color: #9aa0a6;
         margin: 0;
         font-family: 'rf-dewi', sans-serif;
         line-height: 1.5;
@@ -82,13 +82,33 @@
     
     &::before {
         left: 0;
-        background: linear-gradient(to right, #f2f2f2 0%, rgba(242, 242, 242, 0.8) 50%, transparent 100%);
+        background: linear-gradient(to right, var(--bg) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
     }
     
     &::after {
         right: 0;
+        background: linear-gradient(to left, var(--bg) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
+    }
+}
+
+/* Light mode overrides to preserve original feedback look */
+:global(.light) {
+    .feedbackSection { background: #f2f2f2; }
+    .testimonialsGrid::before {
+        background: linear-gradient(to right, #f2f2f2 0%, rgba(242, 242, 242, 0.8) 50%, transparent 100%);
+    }
+    .testimonialsGrid::after {
         background: linear-gradient(to left, #f2f2f2 0%, rgba(242, 242, 242, 0.8) 50%, transparent 100%);
     }
+    .testimonialCard {
+        background: #ececec;
+        border: 1px solid #d0d0d0;
+    }
+    .avatar { background: #f0f0f0; border-color: #e0e0e0; }
+    .authorName { color: #000; }
+    .authorRole { color: #666; }
+    .testimonialText { color: #555; }
+    .moreButton { color: black; border-color: black; }
 }
 
 .testimonialRow {
@@ -126,8 +146,8 @@
 }
 
 .testimonialCard {
-    background: #ececec;
-    border: 1px solid #d0d0d0;
+    background: #151515;
+    border: 1px solid #2a2a2a;
     border-radius: 8px;
     padding: 35px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
@@ -159,8 +179,8 @@
     height: 55px;
     border-radius: 50%;
     overflow: hidden;
-    background: #f0f0f0;
-    border: 2px solid #e0e0e0;
+    background: #111111;
+    border: 2px solid #2a2a2a;
     flex-shrink: 0;
     
     img {
@@ -178,7 +198,7 @@
 .authorName {
     font-size: 18px;
     font-weight: 700;
-    color: #000;
+    color: var(--text);
     margin: 0 0 6px 0;
     font-family: 'rf-dewi', sans-serif;
     white-space: nowrap;
@@ -188,7 +208,7 @@
 
 .authorRole {
     font-size: 14px;
-    color: #666;
+    color: #9aa0a6;
     margin: 0;
     font-family: 'rf-dewi', sans-serif;
     font-weight: normal;
@@ -199,7 +219,7 @@
 
 .testimonialText {
     font-size: 15px;
-    color: #555;
+    color: #c7c7c7;
     line-height: 1.7;
     margin: 0;
     font-family: 'rf-dewi', sans-serif;
@@ -224,8 +244,8 @@
 
 .moreButton {
     background: #83afbf;
-    color: black;
-    border: 1px solid black;
+    color: var(--bg);
+    border: 1px solid var(--text);
     padding: 15px 30px;
     border-radius: 25px;
     font-size: 16px;

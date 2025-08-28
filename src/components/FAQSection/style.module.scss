@@ -21,8 +21,13 @@
 
 .faqSection {
     padding: 80px 20px;
-    background: #f2f2f2;
+    background: var(--bg);
     font-family: 'rf-dewi', sans-serif;
+}
+
+/* Light mode wrapper bg */
+:global(.light) {
+    .faqSection { background: #f2f2f2; }
 }
 
 .container {
@@ -46,7 +51,7 @@
      .mainTitle {
          font-size: 74px;
          font-weight: 1000;
-         color: #000;
+         color: var(--text);
          margin: 20px 0 30px 0;
          font-family: 'rf-dewi', sans-serif;
          line-height: 1.1;
@@ -55,7 +60,7 @@
      .subtitle {
          font-size: 20px;
          font-weight: 700;
-         color: #000;
+         color: var(--text);
          margin: 0 0 25px 0;
          font-family: 'rf-dewi', sans-serif;
          line-height: 1.4;
@@ -71,7 +76,7 @@
     
     .readMoreBtn {
         background: #83afbf;
-        color: black;
+        color: var(--text);
         border: 1px solid black;
         padding: 12px 24px;
         border-radius: 25px;
@@ -115,7 +120,7 @@
         text-align: center;
         font-size: 24px;
         font-weight: 900;
-        color: #000;
+        color: var(--text);
         margin: 0 0 15px 0;
         font-family: 'rf-dewi', sans-serif;
         background: #e5e8de;
@@ -137,7 +142,7 @@
     
     .chatButton {
         background: #83afbf;
-        color: black;
+        color: var(--text);
         border: 1px solid black;
         padding: 12px 24px;
         border-radius: 25px;
@@ -225,7 +230,7 @@
         
         .moreBtn {
             background: #555;
-            color: black;
+            color: var(--text);
             border: none;
             border-radius: 20px;
             padding: 6px 20px;

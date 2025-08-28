@@ -9,12 +9,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
 import Image from 'next/image';
+import { useTheme } from './ThemeProvider';
 
 export default function Header() {
     const header = useRef(null);
     const [isActive, setIsActive] = useState(false);
     const pathname = usePathname();
     const button = useRef(null);
+    const { theme, toggleTheme } = useTheme();
 
     useEffect(() => {
         setIsActive(false)
@@ -68,6 +70,12 @@ export default function Header() {
                     </Magnetic>
                 </div>
                 <div className={styles.rightNav}>
+                    <Magnetic>
+                        <div className={styles.el} onClick={toggleTheme}>
+                            <a>{theme === 'dark' ? 'Light' : 'Dark'}</a>
+                            <div className={styles.indicator}></div>
+                        </div>
+                    </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
                             <a>Contact</a>
