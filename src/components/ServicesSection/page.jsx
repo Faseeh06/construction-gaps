@@ -1,4 +1,5 @@
 'use client'
+import { useRef, useEffect, useState } from 'react'
 import styles from './style.module.scss'
 
 export default function ServicesSection() {
@@ -26,8 +27,55 @@ export default function ServicesSection() {
             description: "Complèt einegen",
             details: "Komplète heette ehrdréeh eintëerlexttartung",
             image: "/images/column.jpg"
+        },
+        {
+            id: 4,
+            title: "Bauplanung",
+            subtitle: "Planung",
+            description: "Detailierte projektplanung",
+            details: "Zeitpläne, abläufe und ressourcenmanagement für den bau",
+            image: "/images/column.jpg"
+        },
+        {
+            id: 5,
+            title: "Außenarbeiten",
+            subtitle: "Fassade",
+            description: "Außen- und gartenarbeiten",
+            details: "Fassadenrenovierung, terrassen und landschaftsgestaltung",
+            image: "/images/column.jpg"
         }
     ]
+
+    const gridRef = useRef(null)
+    const [arrowDirectionRight, setArrowDirectionRight] = useState(true)
+
+    const scrollByCards = (numCards) => {
+        const container = gridRef.current
+        if (!container) return
+        const firstCard = container.querySelector(`.${styles.serviceCard}`)
+        if (!firstCard) return
+        const gapPx = 20
+        const amount = (firstCard.offsetWidth + gapPx) * numCards
+        container.scrollBy({ left: amount, behavior: 'smooth' })
+    }
+
+    useEffect(() => {
+        const container = gridRef.current
+        if (!container) return
+        const handleScroll = () => {
+            const maxScroll = container.scrollWidth - container.clientWidth
+            const atEnd = container.scrollLeft >= maxScroll - 2
+            const atStart = container.scrollLeft <= 2
+            if (atEnd) {
+                setArrowDirectionRight(false)
+            } else if (atStart) {
+                setArrowDirectionRight(true)
+            }
+        }
+        handleScroll()
+        container.addEventListener('scroll', handleScroll)
+        return () => container.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return (
         <section className={styles.servicesSection}>
@@ -52,7 +100,7 @@ export default function ServicesSection() {
                     </div>
                     
                     <div className={styles.rightContent}>
-                        <div className={styles.servicesGrid}>
+                        <div className={styles.servicesGrid} ref={gridRef}>
                             {services.map((service) => (
                                 <div 
                                     key={service.id} 
@@ -70,6 +118,13 @@ export default function ServicesSection() {
                                 </div>
                             ))}
                         </div>
+                        <button
+                            className={`${styles.arrowBtn} ${styles.arrowRight}`}
+                            onClick={() => scrollByCards(arrowDirectionRight ? 2 : -2)}
+                            aria-label={arrowDirectionRight ? 'Scroll right' : 'Scroll left'}
+                        >
+                            <span className={`${styles.arrowGlyph} ${arrowDirectionRight ? styles.arrowGlyphRight : styles.arrowGlyphLeft}`}>↓</span>
+                        </button>
                     </div>
                 </div>
                 <div className={styles.textGrid}>
