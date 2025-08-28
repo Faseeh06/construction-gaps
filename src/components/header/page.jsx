@@ -17,8 +17,8 @@ export default function Header() {
     const button = useRef(null);
 
     useEffect(() => {
-        if (isActive) setIsActive(false)
-    }, [pathname, isActive])
+        setIsActive(false)
+    }, [pathname])
 
     useLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
