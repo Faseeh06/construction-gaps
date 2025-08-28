@@ -41,7 +41,7 @@ html {
     :root {
         --bg: #000000;
         --text: #ffffff;
-        --accent: #203739;
+        --accent: #0fb5b0;
     }
     .light {
         --bg: #ffffff;

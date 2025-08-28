@@ -71,6 +71,11 @@
     }
 }
 
+/* SVG "Adresse" text color */
+.addressSvgText {
+    color: var(--accent);
+}
+
 /* Horizontal Line */
 .horizontalLine {
     width: 100%;
@@ -124,6 +129,7 @@
         svg {
             width: 20px;
             height: 20px;
+            color: #000;
         }
     }
     
@@ -261,7 +267,7 @@
         .addressTitle {
             font-size: 22px;
             font-weight: 600;
-            color: var(--text);
+            color: var(--accent);
             margin: 0 0 20px 0;
             font-family: 'rf-dewi', sans-serif;
         }
@@ -386,6 +392,8 @@
                 justify-content: center;
                 cursor: pointer;
                 transition: opacity 0.3s ease;
+                background: var(--accent);
+                color: #ffffff;
                 
                 &:hover {
                     opacity: 0.8;
@@ -393,6 +401,7 @@
                 
                 svg {
                     display: block;
+                    color: currentColor;
                 }
             }
         }
