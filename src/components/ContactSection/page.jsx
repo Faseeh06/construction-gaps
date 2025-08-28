@@ -102,23 +102,13 @@ export default function ContactSection() {
                                 className={styles.avatarImage}
                             />
                         </div>
-                        <div className={styles.avatarIcon}>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                <circle cx="12" cy="7" r="4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                        </div>
                     </div>
-                    
-                    <h3 className={styles.roleTitle}>Projektberaterin</h3>
-                    
+                    <h3 className={styles.roleTitle}>Project Consultant</h3>
+
                     <div className={styles.consultantInfo}>
-                        <p className={styles.consultantName}>Anna Schmidt, Wildow Projektleiter</p>
-                        <p className={styles.consultantEmail}>E: dler@amail Wmuldalilheidi.de</p>
-                        <p className={styles.consultantDate}>Toetty 30 Augo 2023</p>
+                        <p className={styles.consultantName}>Irfan Yildiz</p>
+                        <p className={styles.consultantQuote}>"Building visions into reality."</p>
                     </div>
-                    
-                    <div className={styles.statusIndicator}></div>
                 </div>
 
                 {/* Right Section - Contact Info */}
