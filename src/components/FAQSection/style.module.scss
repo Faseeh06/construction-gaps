@@ -75,7 +75,7 @@
      }
     
     .readMoreBtn {
-        background: #83afbf;
+        background: var(--accent);
         color: var(--text);
         border: 1px solid black;
         padding: 12px 24px;
@@ -141,7 +141,7 @@
     }
     
     .chatButton {
-        background: #83afbf;
+        background: var(--accent);
         color: var(--text);
         border: 1px solid black;
         padding: 12px 24px;
@@ -175,8 +175,8 @@
 }
 
 .faqCard {
-    background: #000;
-    color: white;
+    background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 70%, #2a2a2a 100%);
+    color: var(--text);
     padding: 15px 12px;
     border-radius: 30px;
     cursor: pointer;
@@ -189,12 +189,12 @@
     justify-content: space-between;
     
     &:hover {
-        background: #000;
+        background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 70%, #2a2a2a 100%);
     }
     
     &.largeCard {
         grid-column: span 1;
-        background: #000;
+        background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 70%, #2a2a2a 100%);
         min-height: 180px;
         position: relative;
     }
@@ -205,7 +205,7 @@
         .questionTitle {
             font-size: 26px;
             font-weight: 700;
-            color: white;
+            color: var(--text);
             margin: 0 0 15px 0;
             padding: 10px;
             font-family: 'rf-dewi', sans-serif;
@@ -214,7 +214,7 @@
         
         .answerText {
             font-size: 16px;
-            color: #ccc;
+            color: #cfcfcf;
             margin: 0;
             padding: 10px;
             font-family: 'rf-dewi', sans-serif;
@@ -229,7 +229,7 @@
         left: 20px;
         
         .moreBtn {
-            background: #555;
+            background: rgba(255,255,255,0.15);
             color: var(--text);
             border: none;
             border-radius: 20px;
@@ -241,17 +241,28 @@
             transition: background-color 0.3s ease;
             
             &:hover {
-                background: #666;
+                background: rgba(255,255,255,0.25);
             }
         }
     }
+}
+
+/* Light mode uses previous light look */
+:global(.light) {
+    .faqCard { background: #fff; color: #000; }
+    .faqCard:hover { background: #fff; }
+    .faqCard.largeCard { background: #fff; }
+    .faqCard .cardContent .questionTitle { color: #000; }
+    .faqCard .cardContent .answerText { color: #333; }
+    .faqCard .moreButton .moreBtn { background: #e6e6e6; color: #000; }
+    .faqCard .moreButton .moreBtn:hover { background: #d4d4d4; }
 }
 
 .contactBubble {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #83afbf;
+    background: var(--accent);
     color: white;
     padding: 8px 15px;
     border-radius: 15px;

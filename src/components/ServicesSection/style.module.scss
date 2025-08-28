@@ -72,7 +72,7 @@
     }
     
     .readMoreBtn {
-        background: #83afbf;
+        background: var(--accent);
         color: var(--bg);
         border: 1px solid var(--text);
         padding: 15px 30px;
@@ -369,7 +369,7 @@
     justify-content: flex-start;
     gap: 10px;
     font-size: 18px;
-    color: #83afbf;
+    color: var(--accent);
     font-family: 'rf-dewi', sans-serif;
     font-weight: 600;
 }

@@ -81,8 +81,8 @@
         
         &:focus {
             outline: none;
-            border-color: #83afbf;
-            box-shadow: 0 4px 8px rgba(131, 175, 191, 0.2);
+            border-color: var(--accent);
+            box-shadow: 0 4px 8px rgba(32, 55, 57, 0.2);
             background: var(--bg);
         }
         
@@ -120,7 +120,7 @@
 }
 
 .submitButton {
-    background: #83afbf;
+    background: var(--accent);
     color: var(--bg);
     border: 1px solid black;
     padding: 12px 24px;
@@ -274,10 +274,12 @@
     display: flex;
     justify-content: center;
     height: 700px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contactCard {
-    background: #e5e8de;
+    background: #f2f2f2;
     padding: 30px 25px 220px 25px;
     border-radius: 25px;
     position: relative;
@@ -290,20 +292,37 @@
     flex-direction: column;
 }
 
-.locationIcon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    background: #333;
+.topMapIcon {
+    width: 110px;
+    height: 110px;
+    border: 3px solid var(--accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto 16px auto;
+    color: var(--accent);
+}
+
+/* Light mode keeps original tone */
+:global(.light) {
+    .contactCard { background: #e5e8de; }
+}
+
+.topMapIcon {
+    width: 110px;
+    height: 110px;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+    color: var(--accent);
     
     svg {
-        color: white;
+        width: 44px;
+        height: 44px;
     }
 }
 
@@ -321,7 +340,7 @@
     .emailIcon {
         width: 35px;
         height: 35px;
-        background: #333;
+        background: var(--accent);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -329,7 +348,7 @@
         flex-shrink: 0;
         
         svg {
-            color: white;
+            color: black;
             width: 16px;
             height: 16px;
         }
@@ -356,7 +375,8 @@
 }
 
 .mapSection {
-    background: #83afbf;
+    background: var(--accent);
+    background: var(--accent);
     padding: 20px;
     color: white;
     min-height: 200px;
@@ -385,29 +405,31 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
         
         .mapItem {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 8px;
             margin-bottom: 12px;
             width: 100%;
             
             .mapIcon {
-                width: 16px;
-                height: 16px;
+                width: 28px;
+                height: 28px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-shrink: 0;
+                background: #ffffff;
+                border-radius: 50%;
                 
                 svg {
-                    color: white;
-                    width: 14px;
-                    height: 14px;
+                    color: var(--accent);
+                    width: 16px;
+                    height: 16px;
                 }
             }
             

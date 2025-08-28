@@ -243,7 +243,7 @@
 }
 
 .moreButton {
-    background: #83afbf;
+    background: var(--accent);
     color: var(--bg);
     border: 1px solid var(--text);
     padding: 15px 30px;

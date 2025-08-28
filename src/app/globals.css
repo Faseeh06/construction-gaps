@@ -41,12 +41,12 @@ html {
     :root {
         --bg: #000000;
         --text: #ffffff;
-        --accent: #ff4a17;
+        --accent: #203739;
     }
     .light {
         --bg: #ffffff;
         --text: #000000;
-        --accent: #ff4a17;
+        --accent: #83afbf;
     }
     html, body {
         margin: 0 !important;

@@ -133,7 +133,7 @@
     }
     
     .ctaButton {
-        background: #83afbf;
+        background: var(--accent);
         color: var(--bg);
         border: 1px solid var(--text);
         padding: 12px 45px;
@@ -153,7 +153,7 @@
         margin: 0 auto;
         
         &:hover {
-            background: #6b9aac;
+            background: var(--accent);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
@@ -178,7 +178,7 @@
         color: white;
     }
     .centralCard .ctaButton {
-        background: #83afbf;
+        background: var(--accent);
         color: black;
         border: 1px solid white;
         box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
