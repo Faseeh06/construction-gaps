@@ -25,6 +25,11 @@ export default function FAQSection() {
             id: 4,
             question: "Noch grägen Lorem ?",
             answer: "Lorem Ipsum dolor jaaasd kdsas Lorem Ipsum dolor jaaasd kdsas"
+        },
+        {
+            id: 5,
+            question: "Eine weitere häufige Frage?",
+            answer: "Kurze Antwort als Platzhalter für die fünfte Karte."
         }
     ]
 

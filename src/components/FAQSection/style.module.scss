@@ -164,7 +164,7 @@
 
 .faqCards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 12px;
     margin-top: 40px;
 }
@@ -178,7 +178,7 @@
     transition: all 0.3s ease;
     position: relative;
     min-height: 280px;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
