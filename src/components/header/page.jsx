@@ -41,7 +41,7 @@ export default function Header() {
                 <div className={styles.logo}>
                     <div className={styles.logoImage}>
                         <Image
-                            src="/images/logo1.png"
+                            src="/images/irfan.png?v=1"
                             alt="Elexima Logo"
                             width={40}
                             height={40}
