@@ -6,13 +6,13 @@ export default function Footer() {
         <footer className={styles.footer}>
             {/* Top Header */}
             <div className={styles.topHeader}>
-                <span className={styles.topLeft}>Tordaetrolum 00-15000</span>
-                <span className={styles.topRight}>ed locutiorit</span>
+                {/* <span className={styles.topLeft}>Tordaetrolum 00-15000</span> */}
+                {/* <span className={styles.topRight}>ed locutiorit</span> */}
             </div>
 
             {/* Main Header */}
             <div className={styles.mainHeader}>
-                <h1 className={styles.headerTitle}>LOREM IPSUM DOLOR LOREM</h1>
+                {/* <h1 className={styles.headerTitle}>LOREM IPSUM DOLOR LOREM</h1> */}
             </div>
 
             {/* Horizontal Line */}
@@ -24,14 +24,22 @@ export default function Footer() {
                 <div className={styles.leftSection}>
                     <h2 className={styles.companyName}>Irfan Yildiz</h2>
                     <p className={styles.companyDescription}>
-                        Lorem ipsum dolo Lorem ipsum<br />
-                        kernsanizungen ...
+                        Wir planen und bauen mit Leidenschaft.<br />
+                        Maßgeschneiderte Lösungen für jeden Raum.
                     </p>
+                    <div>
+                        
+                        <p className={styles.companyDescription}>
+                            Max Mustermann – Co‑Founder<br />
+                            „Gemeinsam gestalten wir Räume, die wirken.“<br />
+                            </p> 
+                        
+                    </div>
                     
                     <div className={styles.navigationSection}>
-                        <div className={styles.navigationLine}></div>
-                        <h3 className={styles.navigationTitle}>NAVIGATION</h3>
-                        <div className={styles.navigationLine}></div>
+                        {/* <div className={styles.navigationLine}></div> */}
+                        {/* <h3 className={styles.navigationTitle}>Navigation</h3> */}
+                        {/* <div className={styles.navigationLine}></div> */}
                     </div>
                     
                     <div className={styles.profileImage}>
@@ -54,18 +62,18 @@ export default function Footer() {
                         </svg>
                     </div>
                     
-                    <div className={styles.logoContainer}>
+                    <div id="contact-section" className={styles.logoContainer}>
                         <svg className={styles.logo} viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
                             <text x="140" y="55" fontSize="65" fontWeight="900" fontFamily="rf-dewi, Arial, sans-serif" fill="#59899d" textAnchor="middle">
-                            Address
+                            Adresse
                             </text>
                         </svg>
                     </div>
                     
                     <div className={styles.contactDescription}>
-                        <p>Lorem ipsum Lorem ipsum</p>
-                        <p>Lorem ipsum Lorem ipsum dolor</p>
-                        <p>Lorem ipsum dolor</p>
+                        <p>Kontaktieren Sie uns, um Ihr  </p>
+                        <p>Projekt erfolgreich umzusetzen.</p>
+                        
                     </div>
                     
                     <div className={styles.horizontalDivider}></div>
@@ -73,8 +81,8 @@ export default function Footer() {
                     <div className={styles.horizontalDivider}></div>
                     
                     <div className={styles.addressSection}>
-                        <h4 className={styles.addressTitle}>Musterstraße</h4>
-                        <p className={styles.address}>Mäaterstraet 123</p>
+                        <h4 className={styles.addressTitle}>Kontakt Us</h4>
+                        <p className={styles.address}><a href="#contact-section" onClick={(e) => { e.preventDefault(); const el = document.getElementById('contact-section'); if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }}>irfan@yildiz.com</a></p>
                         <p className={styles.phoneDetail}>(+49 30 444 789)</p>
                         <p className={styles.additionalInfo}>Feonigmem</p>
                     </div>
@@ -91,14 +99,14 @@ export default function Footer() {
                         </svg>
                     </div>
                     
-                    <h2 className={styles.followTitle}>Afölemm</h2>
+                    <h2 className={styles.followTitle}>Folgen</h2>
                     <h2 className={styles.followSubtitle}>sie uns</h2>
                     
-                    <div className={styles.followDescription}>
-                        <p>Sien Ticher Welaschhmefr. Wämeisten.</p>
-                        <p>Sinningreis Marndanwir therbanddn.</p>
-                        <p>Scitaloem therkbog Umzien Wittesem</p>
-                        <p>Masein</p>
+                    <div className={styles.followDescription} style={{ textAlign: 'left' }}>
+                        <p>Folgen Sie uns auf unseren Social-Media-Kanälen,</p>
+                        <p>um über Neuigkeiten, Veranstaltungen</p>
+                        <p>und wichtige Updates stets informiert zu bleiben.</p>
+                        
                     </div>
                     
                     <div className={styles.horizontalDivider}></div>
@@ -137,7 +145,8 @@ export default function Footer() {
             {/* Bottom Copyright */}
             <div className={styles.bottomSection}>
                 <p className={styles.copyright}>
-                    Copyright seur 4.5ireet 1 0 us Aightt colunt to your <strong>Impressang/ ED</strong>
+                Copyright © 2025 Irfan Yildiz – Alle Rechte vorbehalten. <strong>Impressum/ED</strong>
+
                 </p>
             </div>
         </footer>
