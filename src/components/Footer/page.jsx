@@ -76,9 +76,6 @@ export default function Footer() {
                         
                     </div>
                     
-                    <div className={styles.horizontalDivider}></div>
-                    
-                    <div className={styles.horizontalDivider}></div>
                     
                     <div className={styles.addressSection}>
                         <h4 className={styles.addressTitle}>Kontakt Us</h4>
@@ -109,9 +106,7 @@ export default function Footer() {
                         
                     </div>
                     
-                    <div className={styles.horizontalDivider}></div>
                     
-                    <div className={styles.horizontalDivider}></div>
                     
                     <div className={styles.impressumSection}>
                         <h4 className={styles.impressumTitle}>Impressum</h4>

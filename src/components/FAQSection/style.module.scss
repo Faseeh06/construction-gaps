@@ -175,8 +175,8 @@
 }
 
 .faqCard {
-    background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 70%, #2a2a2a 100%);
-    color: var(--text);
+    background: #fbfbfb;
+    color: #000;
     padding: 15px 12px;
     border-radius: 30px;
     cursor: pointer;
@@ -189,12 +189,12 @@
     justify-content: space-between;
     
     &:hover {
-        background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 70%, #2a2a2a 100%);
+        background: #fbfbfb;
     }
     
     &.largeCard {
         grid-column: span 1;
-        background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 70%, #2a2a2a 100%);
+        background: #fbfbfb;
         min-height: 180px;
         position: relative;
     }
@@ -205,7 +205,7 @@
         .questionTitle {
             font-size: 26px;
             font-weight: 700;
-            color: var(--text);
+            color: #000;
             margin: 0 0 15px 0;
             padding: 10px;
             font-family: 'rf-dewi', sans-serif;
@@ -214,7 +214,7 @@
         
         .answerText {
             font-size: 16px;
-            color: #cfcfcf;
+            color: #000;
             margin: 0;
             padding: 10px;
             font-family: 'rf-dewi', sans-serif;
@@ -229,8 +229,8 @@
         left: 20px;
         
         .moreBtn {
-            background: rgba(255,255,255,0.15);
-            color: var(--text);
+            background: #b9babc;
+            color: #000;
             border: none;
             border-radius: 20px;
             padding: 6px 20px;
@@ -241,21 +241,21 @@
             transition: background-color 0.3s ease;
             
             &:hover {
-                background: rgba(255,255,255,0.25);
+                background: #aeb0b2;
             }
         }
     }
 }
 
 /* Light mode uses previous light look */
-:global(.light) {
-    .faqCard { background: #fff; color: #000; }
-    .faqCard:hover { background: #fff; }
-    .faqCard.largeCard { background: #fff; }
+::global(.light) {
+    .faqCard { background: #fbfbfb; color: #000; }
+    .faqCard:hover { background: #fbfbfb; }
+    .faqCard.largeCard { background: #fbfbfb; }
     .faqCard .cardContent .questionTitle { color: #000; }
-    .faqCard .cardContent .answerText { color: #333; }
-    .faqCard .moreButton .moreBtn { background: #e6e6e6; color: #000; }
-    .faqCard .moreButton .moreBtn:hover { background: #d4d4d4; }
+    .faqCard .cardContent .answerText { color: #000; }
+    .faqCard .moreButton .moreBtn { background: #b9babc; color: #000; }
+    .faqCard .moreButton .moreBtn:hover { background: #aeb0b2; }
 }
 
 .contactBubble {
