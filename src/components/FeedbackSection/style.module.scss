@@ -64,7 +64,7 @@
 .testimonialsGrid {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
     margin-bottom: 60px;
     overflow: hidden;
     position: relative;
@@ -113,7 +113,7 @@
 
 .testimonialRow {
     display: flex;
-    gap: 30px;
+    gap: 15px;
     animation-duration: 40s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -149,12 +149,12 @@
     background: #151515;
     border: 1px solid #2a2a2a;
     border-radius: 8px;
-    padding: 35px;
+    padding: 25px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-    min-height: 260px;
-    max-height: 260px;
-    min-width: 420px;
-    max-width: 420px;
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 320px;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -164,19 +164,19 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    gap: 25px;
+    gap: 18px;
 }
 
 .authorInfo {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 15px;
     margin-bottom: 0;
 }
 
 .avatar {
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     overflow: hidden;
     background: #111111;
@@ -196,10 +196,10 @@
 }
 
 .authorName {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text);
-    margin: 0 0 6px 0;
+    margin: 0 0 4px 0;
     font-family: 'rf-dewi', sans-serif;
     white-space: nowrap;
     overflow: hidden;
@@ -207,7 +207,7 @@
 }
 
 .authorRole {
-    font-size: 14px;
+    font-size: 13px;
     color: #9aa0a6;
     margin: 0;
     font-family: 'rf-dewi', sans-serif;
@@ -218,20 +218,20 @@
 }
 
 .testimonialText {
-    font-size: 15px;
+    font-size: 14px;
     color: #c7c7c7;
-    line-height: 1.7;
+    line-height: 1.6;
     margin: 0;
     font-family: 'rf-dewi', sans-serif;
     font-weight: 600;
     flex: 1;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     word-wrap: break-word;
     white-space: normal;
 }
@@ -277,24 +277,24 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     .testimonialCard {
-        min-width: 380px;
-        max-width: 380px;
-        min-height: 240px;
-        max-height: 240px;
+        min-width: 300px;
+        max-width: 300px;
+        min-height: 180px;
+        max-height: 180px;
     }
     
     .testimonialRow {
-        gap: 25px;
+        gap: 12px;
     }
 }
 
 @media (max-width: 968px) {
     .testimonialCard {
-        min-width: 350px;
-        max-width: 350px;
-        min-height: 220px;
-        max-height: 220px;
-        padding: 30px;
+        min-width: 280px;
+        max-width: 280px;
+        min-height: 170px;
+        max-height: 170px;
+        padding: 25px;
     }
     
     .header .mainTitle {
@@ -303,7 +303,7 @@
     
     .testimonialRow {
         animation-duration: 30s;
-        gap: 20px;
+        gap: 10px;
     }
     
     .authorName {
@@ -351,16 +351,16 @@
     }
     
     .testimonialCard {
-        min-width: 320px;
-        max-width: 320px;
-        padding: 25px;
-        min-height: 200px;
-        max-height: 200px;
+        min-width: 260px;
+        max-width: 260px;
+        padding: 20px;
+        min-height: 160px;
+        max-height: 160px;
     }
     
     .testimonialRow {
         animation-duration: 25s;
-        gap: 15px;
+        gap: 8px;
     }
     
     .avatar {

@@ -117,14 +117,7 @@ export default function ServicesSection() {
                                     <div className={styles.cardImage} />
                                 </div>
                             ))}
-                        </div>
-                        <button
-                            className={`${styles.arrowBtn} ${styles.arrowRight}`}
-                            onClick={() => scrollByCards(arrowDirectionRight ? 2 : -2)}
-                            aria-label={arrowDirectionRight ? 'Scroll right' : 'Scroll left'}
-                        >
-                            <span className={`${styles.arrowGlyph} ${arrowDirectionRight ? styles.arrowGlyphRight : styles.arrowGlyphLeft}`}>↓</span>
-                        </button>
+                        </div>                
                     </div>
                 </div>
                 <div className={styles.textGrid}>

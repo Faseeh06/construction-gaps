@@ -104,19 +104,21 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
+    width: 100%;
 }
 
 .servicesGrid {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((720px - 40px) / 3);
+    grid-auto-columns: calc((800px - 40px) / 3);
     gap: 20px;
-    max-width: 720px;
+    max-width: 800px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 10px;
     scrollbar-width: none; /* Firefox */
+    margin-left: auto;
 }
 
 .servicesGrid::-webkit-scrollbar {
@@ -128,12 +130,12 @@
     padding: 0;
     overflow: hidden;
     position: relative;
-    min-height: 450px;
+    min-height: 520px;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
     
-    background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 70%, #2a2a2a 100%);
+    background: linear-gradient(90deg, #fcfcfc 0%, #fcfcfc 80%, #cfcfcf 100%);
     scroll-snap-align: start;
     
     &:hover {
@@ -147,7 +149,7 @@
         background: #f2f2f2;
     }
     .serviceCard {
-        background: linear-gradient(90deg, #e5e5e5 0%, #e5e5e5 70%, #9a9a9a 100%);
+        background: linear-gradient(90deg, #1c1c1c 0%, #1c1c1c 70%, #2a2a2a 100%);
     }
     .arrowBtn {
         border: 1px solid #000;
@@ -187,7 +189,7 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-.arrowRight { right: -60px; }
+.arrowRight { right: -70px; }
 
 .arrowGlyph {
     display: inline-block;
@@ -200,14 +202,14 @@
 .arrowGlyphLeft { transform: rotate(90deg); }
 
 .cardContent {
-    padding: 20px 12px;
+    padding: 25px 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     background: transparent;
     border-radius: 20px;
-    margin: 20px;
+    margin: 25px;
     position: relative;
     z-index: 1;
 }
@@ -230,10 +232,10 @@
 }
 
 .serviceTitle {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    color: var(--text);
-    margin: 0 0 5px 0;
+    color: #1c1c1c;
+    margin: 0 0 8px 0;
     font-family: 'rf-dewi', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -241,9 +243,9 @@
 }
 
 .serviceSubtitle {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 900;
-    color: var(--text);
+    color: #1c1c1c;
     margin: 0;
     font-family: 'rf-dewi', sans-serif;
     line-height: 1;
@@ -251,9 +253,9 @@
 }
 
 .serviceDescription {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
-    color: var(--text);
+    color: #1c1c1c;
     margin: 0;
     font-family: 'rf-dewi', sans-serif;
     line-height: 1.3;
@@ -261,8 +263,8 @@
 }
 
 .serviceDetails {
-    font-size: 16px;
-    color: #b3b3b3;
+    font-size: 18px;
+    color: #666666;
     margin: 0;
     font-family: 'rf-dewi', sans-serif;
     line-height: 1.4;
@@ -344,7 +346,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 40px;
-    max-width: 720px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: 0;
 }
