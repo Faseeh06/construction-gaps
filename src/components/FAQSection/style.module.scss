@@ -248,12 +248,19 @@
 }
 
 /* Light mode uses previous light look */
-::global(.light) {
-    .faqCard { background: #fbfbfb; color: #000; }
-    .faqCard:hover { background: #fbfbfb; }
-    .faqCard.largeCard { background: #fbfbfb; }
-    .faqCard .cardContent .questionTitle { color: #000; }
-    .faqCard .cardContent .answerText { color: #000; }
+:global(.light) {
+    .faqCard { 
+        background: linear-gradient(90deg, #030303 0%, #030303 80%, #313131 100%); 
+        color: #fff; 
+    }
+    .faqCard:hover { 
+        background: linear-gradient(90deg, #030303 0%, #030303 80%, #313131 100%); 
+    }
+    .faqCard.largeCard { 
+        background: linear-gradient(90deg, #030303 0%, #030303 80%, #313131 100%); 
+    }
+    .faqCard .cardContent .questionTitle { color: #fff; }
+    .faqCard .cardContent .answerText { color: #fff; }
     .faqCard .moreButton .moreBtn { background: #b9babc; color: #000; }
     .faqCard .moreButton .moreBtn:hover { background: #aeb0b2; }
 }
